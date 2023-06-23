@@ -4,25 +4,27 @@ using UnityEngine;
 
 public class InventoryUIController : MonoBehaviour
 {
-    public List<SlotUI>uiList = new List<SlotUI>();
-    Inventory userInventory;
+    public List<SlotUI> uiList = new List<SlotUI>();
+    private Inventory _userInventory;
+
     private void Start()
     {
-        userInventory = gameObject.GetComponent<Inventory>();
+        _userInventory = gameObject.GetComponent<Inventory>();
         //UpdateUI();
     }
 
     public void UpdateUI()
     {
-        for(int i = 0; i < uiList.Count; i++)
+        for (int i = 0; i < uiList.Count; i++)
         {
-            if (userInventory.playerInventory.inventorySlots[i].itemCount > 0)
+            if (_userInventory.playerInventory.inventorySlots[i].itemCount > 0)
             {
-                uiList[i].itemImage.sprite = userInventory.playerInventory.inventorySlots[i].item.itemIcon;
-                if (userInventory.playerInventory.inventorySlots[i].item.canStackable == true )
+                uiList[i].itemImage.sprite = _userInventory.playerInventory.inventorySlots[i].item.itemIcon;
+
+                if (_userInventory.playerInventory.inventorySlots[i].item.canStackable)
                 {
                     uiList[i].itemCountText.gameObject.SetActive(true);
-                    uiList[i].itemCountText.text= userInventory.playerInventory.inventorySlots[i].itemCount.ToString(); 
+                    uiList[i].itemCountText.text = _userInventory.playerInventory.inventorySlots[i].itemCount.ToString();
                 }
                 else
                 {
