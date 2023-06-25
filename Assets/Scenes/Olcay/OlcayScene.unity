@@ -171,7 +171,6 @@ MonoBehaviour:
   maxEnemies: 3
   spawnRadius: 3
   spawnInterval: 2
-  spawnStartInterval: 0
 --- !u!1 &64009233
 GameObject:
   m_ObjectHideFlags: 3
@@ -1243,7 +1242,6 @@ MonoBehaviour:
   maxEnemies: 3
   spawnRadius: 3
   spawnInterval: 2
-  spawnStartInterval: 0
 --- !u!1 &1536857060
 GameObject:
   m_ObjectHideFlags: 0
@@ -1376,7 +1374,6 @@ MonoBehaviour:
   maxEnemies: 3
   spawnRadius: 3
   spawnInterval: 2
-  spawnStartInterval: 0
 --- !u!1 &1715051611
 GameObject:
   m_ObjectHideFlags: 0
@@ -1425,7 +1422,6 @@ MonoBehaviour:
   maxEnemies: 3
   spawnRadius: 3
   spawnInterval: 2
-  spawnStartInterval: 0
 --- !u!1 &1747754855
 GameObject:
   m_ObjectHideFlags: 0
@@ -1441,7 +1437,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1747754856
 Transform:
   m_ObjectHideFlags: 0
@@ -1510,7 +1506,6 @@ MonoBehaviour:
   maxEnemies: 3
   spawnRadius: 3
   spawnInterval: 2
-  spawnStartInterval: 0
 --- !u!1 &1831653016
 GameObject:
   m_ObjectHideFlags: 0
@@ -1798,6 +1793,14 @@ PrefabInstance:
     - target: {fileID: 3277803633903884344, guid: 2fc3a8808c777914aa1a7696c3857cff, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3277803633903884347, guid: 2fc3a8808c777914aa1a7696c3857cff, type: 3}
+      propertyPath: movementDistance
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3277803633903884347, guid: 2fc3a8808c777914aa1a7696c3857cff, type: 3}
+      propertyPath: movementDuration
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3277803633903884349, guid: 2fc3a8808c777914aa1a7696c3857cff, type: 3}
       propertyPath: m_Name

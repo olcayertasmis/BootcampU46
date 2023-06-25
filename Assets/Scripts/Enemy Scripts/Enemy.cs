@@ -23,8 +23,11 @@ namespace Enemy_Scripts
         [SerializeField] private float movementDistance;
         private float _movementTimer;
         private Vector3 _originalPosition;
-
+        private Vector3 _targetMovingAround;
+        private Vector3 randomDirection;
+        
         private bool _isFollowing;
+        private bool isMovingAround;
 
         private void Awake()
         {
@@ -40,8 +43,7 @@ namespace Enemy_Scripts
 
         private void Update()
         {
-            if (_target == null)
-                return;
+            if (!_target) return;
 
             float distanceToTarget = Vector3.Distance(transform.position, _target.position);
 
@@ -49,14 +51,13 @@ namespace Enemy_Scripts
             else if (_isFollowing && distanceToTarget > followRange) StopFollowing();
 
             if (_isFollowing) FollowTarget();
-            //else MoveAround();
+            else
+            {
+                MoveAround();
+                CheckAroundPos();
+            }
 
             if (health <= 0) Die();
-        }
-
-        private void FixedUpdate()
-        {
-            if (!_isFollowing) MoveAround();
         }
 
         private void StartFollowing()
@@ -82,16 +83,28 @@ namespace Enemy_Scripts
 
             if (_movementTimer >= movementDuration)
             {
-                Vector3 randomDirection = Random.insideUnitSphere;
-                randomDirection.y = 0f;
-                randomDirection.Normalize();
+                if (!isMovingAround)
+                {
+                    randomDirection = Random.insideUnitSphere;
+                    randomDirection.y = 0f;
+                    randomDirection.Normalize();
+                }
 
-                Vector3 targetPosition = _originalPosition + randomDirection * movementDistance;
+                _targetMovingAround = _originalPosition + randomDirection * movementDistance;
 
-                Vector3 moveDirection = (targetPosition - transform.position).normalized;
+                Vector3 moveDirection = (_targetMovingAround - transform.position).normalized;
                 _enemyController.Move(moveDirection * (speed * Time.deltaTime));
 
-                _movementTimer = 0f;
+                isMovingAround = true;
+            }
+        }
+
+        private void CheckAroundPos()
+        {
+            if (Vector3.Distance(transform.position, _targetMovingAround) <= .1f && isMovingAround)
+            {
+                isMovingAround = false;
+                _movementTimer = 0;
             }
         }
 
