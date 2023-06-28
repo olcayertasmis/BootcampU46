@@ -12,7 +12,7 @@ public class PauseMenu : MonoBehaviour
     public GameObject MinimapMenuPanel;
     private bool isPaused = false;
     private bool isGameStarted = false;
-    private bool isMinimapOpen = false;
+    //private bool isMinimapOpen = false;
 
     //private void Start()
     //{
@@ -52,7 +52,7 @@ public class PauseMenu : MonoBehaviour
         }
         if (panel == "MinimapMenuPanel")
         {
-            PauseGame();
+            //PauseGame();
         }
         //else if(panel == "BackButton")
         //{
