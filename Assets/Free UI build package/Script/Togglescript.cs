@@ -8,7 +8,7 @@ public class Togglescript : MonoBehaviour {
 
     Toggle toggle;
 
-    private void Start()
+    public void Start()
     {
         toggle = GetComponent<Toggle>();
     }
@@ -16,7 +16,7 @@ public class Togglescript : MonoBehaviour {
     public GameObject Slider;
 
 
-    private void Update()
+    public void Update()
     {
         if (toggle.isOn)
         {
