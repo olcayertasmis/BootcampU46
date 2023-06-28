@@ -8,7 +8,6 @@ namespace Enemy_Scripts
         [SerializeField] private int maxEnemies;
         [SerializeField] private float spawnRadius;
         [SerializeField] private float spawnInterval;
-        [SerializeField] private int spawnStartInterval;
 
         private int _currentEnemies;
 
