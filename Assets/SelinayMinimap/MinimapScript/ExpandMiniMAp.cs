@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ExpandMiniMAp : MonoBehaviour
+public class ExpandMiniMap : MonoBehaviour
 {
     private GameObject cam;
     public Camera mapCamera;
@@ -18,17 +18,17 @@ public class ExpandMiniMAp : MonoBehaviour
         menuOn = gameObject.GetComponent<Toggle>();
     }
 
-    public void Update()
-    {
-        if (menuOn.isOn)
-        {
-            mapCamera.orthographicSize = big;
-            //mapCamera.orthographicSize = mapZoom.value;
-        }
-        else
-        {
-            mapCamera.orthographicSize = 15.0f;
-        }
-        //mapCamera.orthographicSize = mapZoom.value;
-    }
+    //public void Update()
+    //{
+    //    if (menuOn.isOn)
+    //    {
+    //        mapCamera.orthographicSize = big;
+    //        //mapCamera.orthographicSize = mapZoom.value;
+    //    }
+    //    else
+    //    {
+    //        mapCamera.orthographicSize = 15.0f;
+    //    }
+    //    //mapCamera.orthographicSize = mapZoom.value;
+    //}
 }

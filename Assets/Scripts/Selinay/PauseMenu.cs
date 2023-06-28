@@ -6,63 +6,87 @@ using UnityEngine.UI;
 
 public class PauseMenu : MonoBehaviour
 {
-    public static bool isPaused;
-    public GameObject canvasPause;
-    private Toggle _MapToggle;
-    public GameObject minimap;
-    private Toggle _MenuToggle;
+    public GameObject PauseMenuPanel;
+    public GameObject MainMenuPanel;
+    public GameObject OptionsMenuPanel;
+    public GameObject MinimapMenuPanel;
+    private bool isPaused = false;
+    private bool isGameStarted = false;
+    private bool isMinimapOpen = false;
 
-    
-    void Update()
+    //private void Start()
+    //{
+    //    MainMenuPanel.SetActive(false);   //true yapýlacak   
+    //    PauseMenuPanel.SetActive(false);
+    //    OptionsMenuPanel.SetActive(false);
+    //}
+    private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.M))
+        if (Input.GetKeyDown(KeyCode.P))
         {
-            if(isPaused)
+            if (isPaused)
             {
-                Resume();
+                ResumeGame();
             }
             else
             {
-                Pause();
+                PauseGame();
             }
         }
     }
-    public void Resume()
+    public void OpenButton(string panel)
     {
-        canvasPause.SetActive(true);
-        Time.timeScale = 1f;
-        isPaused = false;
-    }
-    public void Pause()
-    {
-        canvasPause.SetActive(true);
-        Time.timeScale = 0;
-        isPaused = true;
-    }
-    public void Menu()
-    {
-        SceneManager.LoadScene(0);
-        Time.timeScale = 1f;
-    }
-    private void Awake()
-    {
-        _MenuToggle = GetComponent<Toggle>();
-        _MapToggle = minimap.GetComponentInChildren<Toggle>();
-    }
-    public void MenuOn()
-    {
-
-        Time.timeScale = 0;
-
-        minimap.gameObject.SetActive(false);
-    }
-    public void MenuOff()
-    {
-
-        minimap.gameObject.SetActive(true);
-        if (_MapToggle.isOn)
+        if(panel == "PauseMenuPanel")
         {
-            _MapToggle.isOn = false;
+            PauseGame();
+        } 
+        else if(panel == "ResumeButton")
+        {
+            ResumeGame();
+        }
+        else if(panel == "OptionsButton")
+        {
+            OptionsMenuPanel.SetActive (true);
+            //MainMenuPanel.SetActive (false);
+            //PauseMenuPanel.SetActive (false);
+        }
+        if (panel == "MinimapMenuPanel")
+        {
+            PauseGame();
+        }
+        //else if(panel == "BackButton")
+        //{
+        //    if (isMinimapOpen)
+        //    {
+        //        Time.timeScale = 0f;
+        //    }
+        //    else
+        //    {
+        //        ResumeGame();
+        //    }
+        //}
+    }
+    public void StartGame()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        if (!isGameStarted)
+        {
+            isGameStarted = true;
+            MainMenuPanel.SetActive(false);                       
         }
     }
+    private void PauseGame()
+    {
+        isPaused = true;
+        Time.timeScale = 0f; // Oyun zamanýný durdur
+        PauseMenuPanel.SetActive(true);       
+    }
+
+    private void ResumeGame()
+    {
+        isPaused = false;
+        Time.timeScale = 1f; // Oyun zamanýný tekrar baþlat
+        PauseMenuPanel.SetActive(false);        
+    }
+
 }

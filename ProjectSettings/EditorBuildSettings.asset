@@ -4,5 +4,17 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Selinay/MainMenu.unity
+    guid: ab277294ff2c7d345804a86352c7a195
+  - enabled: 1
+    path: Assets/Scenes/SampleScene.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/Selinay/Level1.unity
+    guid: c888b67000c0b404d86fc5c8a5888ea5
+  - enabled: 1
+    path: Assets/Scenes/Selinay/DenemeSahnesi.unity
+    guid: 5e28d11b7d5866643905131aeb402404
   m_configObjects: {}
