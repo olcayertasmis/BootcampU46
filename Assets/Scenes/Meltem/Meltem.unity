@@ -363,6 +363,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4233402079456579585, guid: e77d298db7653d54c974754cf922c788, type: 3}
+      propertyPath: m_ShadowCastingMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4233402079456579585, guid: e77d298db7653d54c974754cf922c788, type: 3}
+      propertyPath: m_DrawTreesAndFoliage
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4233402079456579585, guid: e77d298db7653d54c974754cf922c788, type: 3}
+      propertyPath: m_ReflectionProbeUsage
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4233402079456579586, guid: e77d298db7653d54c974754cf922c788, type: 3}
       propertyPath: m_RootOrder
       value: 3
