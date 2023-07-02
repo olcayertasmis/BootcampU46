@@ -38,3 +38,23 @@ Belirsiz
 * Problem durumlarını daha hızlı fark ederek daha kesin adımları daha kısa sürede atmayı başarmak toplantının gündemini oluşturdu.(Tema değişimi çok fazla zaman kaybetmemize neden oldu.)
 * Daily Scrum toplantılarına daha fazla önem verilmeli. Herkesin ilerlemeleri ve fikirlerini paylaşmasının önemi üzerinde duruldu.
 * Hepimizin proje üzerinde harcadığı saat miktarını arttırmaya yönelik neler yapılabileceği tartışıldı. 
+--------
+# 2.Sprint
+* Sprint Notları: Görevler, toplantılarda alınan kararlar ve paylaşılan belgeler Backlog Board içinde cardlar kullanılarak özetlenmiştir. <br/>
+* Sprint içinde tamamlanması tahmin edilen puan: 150 Puan<br/>
+* Backlog düzeni:Ekip içindeki görevler taglerle ilgili kişilere atanmıştır.Görevlerin puan değerleri tagler yardımıyla belirtilmiştir.Renkli cardlar kullanılarak Unity, Proje Yönetimi görevleri birbirinden ayrılmıştır.<br/>
+* Puan tamamlama mantığı:Bu sprint içinde daha çok tekil görevler alınmış ve görevlerin iş yükü artmış bu sebeple tekil görevlerin küçük olanları 10 puan iken, tekil ve daha büyük görevlerin 25 puan olmasına karar verilmiştir.Bu sprint içinde alınması gereken toplam puan  150 olarak belirlenirken.Meltem'in önemli bir hastalık geçirmesi ve Selinay'ın büyük bir hata alması sebebiyle ancak 130 puan toplanabilmiştir.<br/>
+* Daily Scrum: Daily Scrum toplantılarının ekibimizde çalışan bir arkadaşımız olduğu için Whatsapp'ta kurulan bir grup üzerinden yapılmasına karar verilmiştir.[Daily Scrum Screenshot](https://decisive-alloy-f01.notion.site/Bootcamp-1f9db0cc2931433ba877b9ef0aa736cb?pvs=4)
+ * Sprint board update: Sprint board screenshotları:
+![Ekran görüntüsü 2023-07-03 005526](https://github.com/olcayertasmis/BootcampU46/assets/120524245/867c5a5f-f42f-4313-8d4d-02cabf45cc0a)
+![Ekran görüntüsü 2023-07-03 004955](https://github.com/olcayertasmis/BootcampU46/assets/120524245/cf9fff8a-62eb-4ec2-b617-f3efcf211596)
+![Ekran görüntüsü 2023-07-02 210454](https://github.com/olcayertasmis/BootcampU46/assets/120524245/77cf7c8c-647f-4cac-af32-b195998783cb)
+![52229587-73ee-4176-b20f-8b51c3bcadee](https://github.com/olcayertasmis/BootcampU46/assets/120524245/d9e8d2d4-88b4-4579-a47c-4e95a975d475)
+
+ ### Sprint Review:
+* Bu sprint içinde enemy-spawn kodları, karakter animasyonları, sahne tasarımlarının görevlere dönük olarak düzenlenmesi, oyuniçi görevlerin gerçekleştirilebilir sprint görevleri sebebiyle(Inventory,Minimap) yeniden düzenlenmesine karar verildi.Bu şekilde oyun yapısı içindeki gerçekleştirilmesi düşünülen ancak kafalarda soru işareti oluşturan YAPABİLİR MİYİZ? sorusu ortadan kaldırılarak daha kesin adımlar atılmaya başlandı. 
+ ### Sprint Retrospective:
+* Bazı toplantılara katılamayan arkadaşlarımızın alınan kararlardan haberdar edilmesi hususunda daha dikkatli davranılması gerektiğine vurgu yapıldı.
+* Alınan görevlerdeki işlerin, süreçlerin görevi alan kişi tarafından kendisine açılan card başlığında detaylandırmasının herkesin işini kolaylaştıracağına karar verildi.
+* 3.sprint içinde görev alan kişilerin birbirinin görevine etkisi olacağına karar verdiği durumları şablonlar kullanarak netleştirmesi ve vurgulamasına karar verildi.
+* Sınav haftalarının bitmesinin kutlanması.
