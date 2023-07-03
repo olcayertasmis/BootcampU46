@@ -9,7 +9,7 @@ public class InventoryUIController : MonoBehaviour
     private void Start()
     {
         _userInventory = gameObject.GetComponent<Inventory>();
-        UpdateUI();
+        //UpdateUI();
     }
 
     public void UpdateUI() //arayüz güncellemesi için 

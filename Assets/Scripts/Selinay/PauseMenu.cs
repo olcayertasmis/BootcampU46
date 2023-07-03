@@ -9,17 +9,19 @@ public class PauseMenu : MonoBehaviour
     public GameObject PauseMenuPanel;
     public GameObject MainMenuPanel;
     public GameObject OptionsMenuPanel;
+    public GameObject InventoryMenuPanel;
     public GameObject MinimapMenuPanel;
+    public GameObject ActionBarPanel;
     private bool isPaused = false;
     private bool isGameStarted = false;
     //private bool isMinimapOpen = false;
 
-    //private void Start()
-    //{
-    //    MainMenuPanel.SetActive(false);   //true yapýlacak   
-    //    PauseMenuPanel.SetActive(false);
-    //    OptionsMenuPanel.SetActive(false);
-    //}
+    private void Start()
+    {
+        //MainMenuPanel.SetActive(true);      
+        //PauseMenuPanel.SetActive(false);
+        //OptionsMenuPanel.SetActive(false);
+    }
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.P))
@@ -50,20 +52,32 @@ public class PauseMenu : MonoBehaviour
             //MainMenuPanel.SetActive (false);
             //PauseMenuPanel.SetActive (false);
         }
-        if (panel == "MinimapMenuPanel")
+        if (panel == "BackButton")
         {
-            //PauseGame();
+            ResumeGame();
         }
-        //else if(panel == "BackButton")
+        if (panel == "InventoryMenuPanel")
+        {
+            if (!isPaused)
+            {
+                PauseGame();
+                ActionBarPanel.SetActive(true);
+            }
+            InventoryMenuPanel.SetActive(true);
+
+        }
+        //else if (panel == "ActionMenuPanel")//Oyun baþladýktan sonra diðer paneller çalýþýrken(Inventory dýþýnda) ActionMenuPanel kapansýn Yoksa hep açýk dursun.(YAZAMADIM)
         //{
-        //    if (isMinimapOpen)
+
+        //    if (MainMenuPanel.activeSelf || PauseMenuPanel.activeSelf || OptionsMenuPanel.activeSelf || MinimapMenuPanel.activeSelf)
         //    {
-        //        Time.timeScale = 0f;
+        //        ActionBarPanel.SetActive(false);
         //    }
         //    else
         //    {
-        //        ResumeGame();
+        //        ActionBarPanel.SetActive(true);
         //    }
+
         //}
     }
     public void StartGame()
@@ -74,19 +88,28 @@ public class PauseMenu : MonoBehaviour
             isGameStarted = true;
             MainMenuPanel.SetActive(false);                       
         }
+        else if (!isGameStarted)
+        {
+            isGameStarted = true;
+            ActionBarPanel.SetActive(true);
+        }
     }
-    private void PauseGame()
+    public void PauseGame()
     {
         isPaused = true;
         Time.timeScale = 0f; // Oyun zamanýný durdur
         PauseMenuPanel.SetActive(true);       
     }
 
-    private void ResumeGame()
+    public void ResumeGame()
     {
         isPaused = false;
         Time.timeScale = 1f; // Oyun zamanýný tekrar baþlat
         PauseMenuPanel.SetActive(false);        
+    }
+    public void QuitGame()
+    {
+        Application.Quit();
     }
 
 }
