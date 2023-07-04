@@ -7,14 +7,13 @@ namespace SaveScripts
     public class SaveTrigger : MonoBehaviour
     {
         public GameObject saveMenu;
-        public GameObject player;
         public InputField slotNameInputField;
 
-        private bool isTriggered = false;
+        private bool isTriggered;
 
         private void OnTriggerEnter(Collider other)
         {
-            if (other.gameObject == player && !isTriggered)
+            if (other.gameObject.CompareTag("Player") && !isTriggered)
             {
                 isTriggered = true;
                 OpenSaveMenu();

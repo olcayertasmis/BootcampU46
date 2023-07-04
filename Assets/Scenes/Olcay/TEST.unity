@@ -1834,7 +1834,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   saveMenu: {fileID: 791223828}
-  player: {fileID: 0}
   slotNameInputField: {fileID: 259439981}
 --- !u!65 &1309868130
 BoxCollider:
@@ -1907,7 +1906,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1309868128}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.52, y: 0, z: 3.19}
+  m_LocalPosition: {x: -3.7, y: 0, z: 3.19}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
