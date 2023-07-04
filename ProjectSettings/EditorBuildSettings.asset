@@ -17,4 +17,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Selinay/DenemeSahnesi.unity
     guid: 5e28d11b7d5866643905131aeb402404
+  - enabled: 1
+    path: Assets/Scenes/Olcay/MainMenuTest.unity
+    guid: 6e320c6debef647418fe02eddbc25db3
+  - enabled: 1
+    path: Assets/Scenes/Olcay/OlcayScene.unity
+    guid: 493fedd65aff7bc40ba715bc4d8b5780
+  - enabled: 1
+    path: Assets/Scenes/Olcay/TEST.unity
+    guid: 99ba24a905890364c896378af0ecc838
+  - enabled: 1
+    path: Assets/Scenes/Olcay/TEST2.unity
+    guid: 880ef05af91b4214f8f4081a380992fb
   m_configObjects: {}

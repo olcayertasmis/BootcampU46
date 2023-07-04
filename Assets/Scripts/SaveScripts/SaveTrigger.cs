@@ -1,5 +1,5 @@
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 namespace SaveScripts
@@ -7,46 +7,41 @@ namespace SaveScripts
     public class SaveTrigger : MonoBehaviour
     {
         public GameObject saveMenu;
-        public GameObject slotList;
-        public Button saveButton;
-        public Button cancelButton;
+        public GameObject player;
+        public InputField slotNameInputField;
+
+        private bool isTriggered = false;
 
         private void OnTriggerEnter(Collider other)
         {
-            if (other.CompareTag("Player"))
+            if (other.gameObject == player && !isTriggered)
             {
-                saveMenu.SetActive(true);
-                RefreshSlotList();
-                saveButton.onClick.RemoveAllListeners();
-                saveButton.onClick.AddListener(SaveGame);
-                cancelButton.onClick.AddListener(CloseMenu);
+                isTriggered = true;
+                OpenSaveMenu();
             }
         }
 
-        private void SaveGame()
+        private void OpenSaveMenu()
+        {
+            saveMenu.SetActive(true);
+        }
+
+        public void SaveGame()
         {
             SaveData data = new SaveData();
-            // Verileri doldurun: data.keyCount, data.levelName, data.position
+            //data.keyCount = PlayerInventory.Instance.GetKeyCount();
+            data.levelName = SceneManager.GetActiveScene().name;
+            data.position = transform.position; // SaveTrigger'ın pozisyonunu alır
 
-            // Slot adını alın
-            string slotName = slotList.GetComponent<Dropdown>().options[slotList.GetComponent<Dropdown>().value].text;
+            string slotName = slotNameInputField.text;
 
-            SaveSystem.SaveGame(slotName, data);
-            CloseMenu();
+            SaveSystem.SaveGame(data, slotName);
+            CloseSaveMenu();
         }
 
-        private void CloseMenu()
+        public void CloseSaveMenu()
         {
             saveMenu.SetActive(false);
-        }
-
-        private void RefreshSlotList()
-        {
-            Dropdown dropdown = slotList.GetComponent<Dropdown>();
-            dropdown.ClearOptions();
-
-            List<string> saveSlots = SaveSystem.GetSaveSlots();
-            dropdown.AddOptions(saveSlots);
         }
     }
 }
