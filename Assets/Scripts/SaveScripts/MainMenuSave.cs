@@ -7,8 +7,8 @@ using SaveScripts;
 
 public class MainMenuSave : MonoBehaviour
 {
-    public GameObject loadMenu;
-    public Dropdown slotDropdown;
+    [SerializeField] private GameObject loadMenu;
+    [SerializeField] private Dropdown slotDropdown;
 
     private void Start()
     {
@@ -23,32 +23,30 @@ public class MainMenuSave : MonoBehaviour
     private IEnumerator StartGameCoroutine()
     {
         string selectedSlotName = GetSelectedSlotName();
+
         if (!string.IsNullOrEmpty(selectedSlotName))
         {
-            SaveData saveData = SaveSystem.LoadGame(selectedSlotName);
+            SaveData saveData = SaveSystem.LoadGameData(selectedSlotName);
+
             if (saveData != null)
             {
-                GameManager.Instance.SetGameData(saveData);
+                //GameManager.Instance.SetGameData(saveData);
 
                 yield return SceneManager.LoadSceneAsync(saveData.levelName);
             }
-            else
-            {
-                Debug.LogError("Kayıtlı veri bulunamadı!");
-            }
+            else Debug.LogError("Kayıtlı veri bulunamadı!");
         }
-        else
-        {
-            Debug.LogError("Kayıt seçilmedi!");
-        }
+        else Debug.LogError("Kayıt seçilmedi!");
     }
 
     public void ContinueGame()
     {
         string lastSaveFileName = SaveSystem.GetLastSaveFileName();
+
         if (!string.IsNullOrEmpty(lastSaveFileName))
         {
-            SaveData saveData = SaveSystem.LoadGame(lastSaveFileName);
+            SaveData saveData = SaveSystem.LoadGameData(lastSaveFileName);
+
             if (saveData != null)
             {
                 GameManager.Instance.SetGameData(saveData);
@@ -56,15 +54,9 @@ public class MainMenuSave : MonoBehaviour
                 StartCoroutine(LoadGameCoroutine(saveData));
                 loadMenu.SetActive(false);
             }
-            else
-            {
-                Debug.LogError("Kayıtlı veri bulunamadı!");
-            }
+            else Debug.LogError("Kayıtlı veri bulunamadı!");
         }
-        else
-        {
-            Debug.LogError("Kayıt bulunamadı!");
-        }
+        else Debug.LogError("Kayıt bulunamadı!");
     }
 
     private IEnumerator LoadGameCoroutine(SaveData saveData)
@@ -72,14 +64,14 @@ public class MainMenuSave : MonoBehaviour
         yield return SceneManager.LoadSceneAsync(saveData.levelName);
     }
 
-    public void RefreshSlotDropdown()
+    private void RefreshSlotDropdown()
     {
         string[] slotNames = SaveSystem.GetSaveSlotNames();
         slotDropdown.ClearOptions();
         slotDropdown.AddOptions(new List<string>(slotNames));
     }
 
-    public string GetSelectedSlotName()
+    private string GetSelectedSlotName()
     {
         return slotDropdown.options[slotDropdown.value].text;
     }

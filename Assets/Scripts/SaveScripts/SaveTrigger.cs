@@ -6,18 +6,17 @@ namespace SaveScripts
 {
     public class SaveTrigger : MonoBehaviour
     {
-        public GameObject saveMenu;
-        public InputField slotNameInputField;
+        [SerializeField] private GameObject saveMenu;
+        [SerializeField] private InputField slotNameInputField;
 
-        private bool isTriggered;
+        private bool _isTriggered;
 
         private void OnTriggerEnter(Collider other)
         {
-            if (other.gameObject.CompareTag("Player") && !isTriggered)
-            {
-                isTriggered = true;
-                OpenSaveMenu();
-            }
+            if (!other.gameObject.CompareTag("Player") || _isTriggered) return;
+
+            _isTriggered = true;
+            OpenSaveMenu();
         }
 
         private void OpenSaveMenu()
@@ -34,7 +33,7 @@ namespace SaveScripts
 
             string slotName = slotNameInputField.text;
 
-            SaveSystem.SaveGame(slotName, data);
+            SaveSystem.SaveGameData(slotName, data);
             CloseSaveMenu();
         }
 

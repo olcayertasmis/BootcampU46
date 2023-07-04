@@ -5,20 +5,21 @@ namespace SaveScripts
 {
     public static class SaveSystem
     {
-        private static string savePath = Application.persistentDataPath + "/saves/";
+        private static string _savePath = Application.persistentDataPath + "/saves/";
 
-        public static void SaveGame(string slotName, SaveData data)
+        public static void SaveGameData(string slotName, SaveData data)
         {
-            string filePath = savePath + slotName + ".json";
+            string filePath = _savePath + slotName + ".json";
             string jsonData = JsonUtility.ToJson(data);
-            Directory.CreateDirectory(savePath);
+            Directory.CreateDirectory(_savePath);
             File.WriteAllText(filePath, jsonData);
             Debug.Log("Game saved to: " + filePath);
         }
 
-        public static SaveData LoadGame(string slotName)
+        public static SaveData LoadGameData(string slotName)
         {
-            string filePath = savePath + slotName + ".json";
+            string filePath = _savePath + slotName + ".json";
+
             if (File.Exists(filePath))
             {
                 string jsonData = File.ReadAllText(filePath);
@@ -35,15 +36,17 @@ namespace SaveScripts
 
         public static bool IsSaveFileExists(string slotName)
         {
-            string filePath = savePath + slotName + ".json";
+            string filePath = _savePath + slotName + ".json";
+
             return File.Exists(filePath);
         }
 
         public static string[] GetSaveSlotNames()
         {
-            if (Directory.Exists(savePath))
+            if (Directory.Exists(_savePath))
             {
-                string[] fileNames = Directory.GetFiles(savePath, "*.json");
+                string[] fileNames = Directory.GetFiles(_savePath, "*.json");
+
                 for (int i = 0; i < fileNames.Length; i++)
                 {
                     fileNames[i] = Path.GetFileNameWithoutExtension(fileNames[i]);
@@ -51,23 +54,14 @@ namespace SaveScripts
 
                 return fileNames;
             }
-            else
-            {
-                return new string[0];
-            }
+            else return new string[0];
         }
 
         public static string GetLastSaveFileName()
         {
             string[] saveSlots = GetSaveSlotNames();
-            if (saveSlots.Length > 0)
-            {
-                return saveSlots[saveSlots.Length - 1];
-            }
-            else
-            {
-                return null;
-            }
+
+            return saveSlots.Length > 0 ? saveSlots[saveSlots.Length - 1] : null;
         }
     }
 }

@@ -19,9 +19,11 @@ namespace Player_Scripts
         private void LoadSavedPlayer()
         {
             string selectedSlotName = SaveSystem.GetLastSaveFileName();
+
             if (!string.IsNullOrEmpty(selectedSlotName))
             {
-                SaveData saveData = SaveSystem.LoadGame(selectedSlotName);
+                SaveData saveData = SaveSystem.LoadGameData(selectedSlotName);
+
                 if (saveData != null)
                 {
                     if (playerPrefab != null)
@@ -34,20 +36,11 @@ namespace Player_Scripts
                         _cinemachineFreeLook.LookAt = spawnedPrefab.transform;
                         _cinemachineFreeLook.Follow = spawnedPrefab.transform;
                     }
-                    else
-                    {
-                        Debug.LogError("Player prefabı yüklenemedi!");
-                    }
+                    else Debug.LogError("Player prefabı yüklenemedi!");
                 }
-                else
-                {
-                    Debug.LogError("Kayıtlı veri bulunamadı!");
-                }
+                else Debug.LogError("Kayıtlı veri bulunamadı!");
             }
-            else
-            {
-                Debug.LogError("Kayıt bulunamadı!");
-            }
+            else Debug.LogError("Kayıt bulunamadı!");
         }
     }
 }
