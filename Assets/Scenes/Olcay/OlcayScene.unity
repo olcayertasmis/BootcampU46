@@ -1912,9 +1912,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b631ca9cac5751b4d8c3677a2b0b75b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  saveMenu: {fileID: 791223828}
-  player: {fileID: 0}
-  slotNameInputField: {fileID: 259439981}
+  saveSlotInput: {fileID: 259439981}
+  savePanel: {fileID: 791223828}
 --- !u!65 &1309868130
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -5,69 +5,69 @@ namespace SaveScripts
 {
     public static class SaveSystem
     {
-        private const string SAVE_FOLDER = "SaveData";
-        private const string FILE_EXTENSION = ".sav";
+        private static string savePath = Application.persistentDataPath + "/saves/";
 
-        public static void SaveGame(SaveData saveData, string slotName)
+        public static void SaveGame(string slotName, SaveData data)
         {
-            string filePath = GetSaveFilePath(slotName);
-            string jsonData = JsonUtility.ToJson(saveData);
+            string filePath = savePath + slotName + ".json";
+            string jsonData = JsonUtility.ToJson(data);
+            Directory.CreateDirectory(savePath);
             File.WriteAllText(filePath, jsonData);
+            Debug.Log("Game saved to: " + filePath);
         }
 
         public static SaveData LoadGame(string slotName)
         {
-            string filePath = GetSaveFilePath(slotName);
+            string filePath = savePath + slotName + ".json";
             if (File.Exists(filePath))
             {
                 string jsonData = File.ReadAllText(filePath);
-                SaveData saveData = JsonUtility.FromJson<SaveData>(jsonData);
-                return saveData;
+                SaveData data = JsonUtility.FromJson<SaveData>(jsonData);
+                Debug.Log("Game loaded from: " + filePath);
+                return data;
             }
             else
             {
-                Debug.LogWarning("Kayıtlı veri bulunamadı: " + slotName);
+                Debug.LogError("Save file not found: " + filePath);
                 return null;
             }
         }
 
+        public static bool IsSaveFileExists(string slotName)
+        {
+            string filePath = savePath + slotName + ".json";
+            return File.Exists(filePath);
+        }
+
         public static string[] GetSaveSlotNames()
         {
-            string[] files = Directory.GetFiles(GetSaveFolderPath(), "*" + FILE_EXTENSION);
-            string[] slotNames = new string[files.Length];
-            for (int i = 0; i < files.Length; i++)
+            if (Directory.Exists(savePath))
             {
-                slotNames[i] = Path.GetFileNameWithoutExtension(files[i]);
+                string[] fileNames = Directory.GetFiles(savePath, "*.json");
+                for (int i = 0; i < fileNames.Length; i++)
+                {
+                    fileNames[i] = Path.GetFileNameWithoutExtension(fileNames[i]);
+                }
+
+                return fileNames;
             }
-            return slotNames;
+            else
+            {
+                return new string[0];
+            }
         }
 
         public static string GetLastSaveFileName()
         {
-            string[] slotNames = GetSaveSlotNames();
-            if (slotNames.Length > 0)
+            string[] saveSlots = GetSaveSlotNames();
+            if (saveSlots.Length > 0)
             {
-                return slotNames[slotNames.Length - 1];
+                return saveSlots[saveSlots.Length - 1];
             }
             else
             {
-                return string.Empty;
+                return null;
             }
-        }
-
-        private static string GetSaveFolderPath()
-        {
-            return Path.Combine(Application.persistentDataPath, SAVE_FOLDER);
-        }
-
-        private static string GetSaveFilePath(string slotName)
-        {
-            string saveFolderPath = GetSaveFolderPath();
-            if (!Directory.Exists(saveFolderPath))
-            {
-                Directory.CreateDirectory(saveFolderPath);
-            }
-            return Path.Combine(saveFolderPath, slotName + FILE_EXTENSION);
         }
     }
 }

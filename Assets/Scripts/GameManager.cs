@@ -48,4 +48,12 @@ public class GameManager : MonoBehaviour
     {
         return playerPosition;
     }
+
+    public void DestroyPlayer()
+    {
+        if (currentPlayer != null)
+        {
+            Destroy(currentPlayer);
+        }
+    }
 }

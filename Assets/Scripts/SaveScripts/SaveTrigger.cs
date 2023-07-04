@@ -35,7 +35,7 @@ namespace SaveScripts
 
             string slotName = slotNameInputField.text;
 
-            SaveSystem.SaveGame(data, slotName);
+            SaveSystem.SaveGame(slotName, data);
             CloseSaveMenu();
         }
 
