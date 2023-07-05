@@ -18,7 +18,7 @@ namespace Player_Scripts
 
         private void LoadSavedPlayer()
         {
-            string selectedSlotName = SaveSystem.GetLastSaveFileName();
+            string selectedSlotName = SaveSystem.GetSelectedSaveSlotName();
 
             if (!string.IsNullOrEmpty(selectedSlotName))
             {

@@ -6,6 +6,7 @@ namespace SaveScripts
     public static class SaveSystem
     {
         private static string _savePath = Application.persistentDataPath + "/saves/";
+        private static string _selectedSaveSlot;
 
         public static void SaveGameData(string slotName, SaveData data)
         {
@@ -62,6 +63,16 @@ namespace SaveScripts
             string[] saveSlots = GetSaveSlotNames();
 
             return saveSlots.Length > 0 ? saveSlots[saveSlots.Length - 1] : null;
+        }
+
+        public static void SetSelectedSaveSlotName(string saveSlotName)
+        {
+            _selectedSaveSlot = saveSlotName;
+        }
+
+        public static string GetSelectedSaveSlotName()
+        {
+            return _selectedSaveSlot;
         }
     }
 }
