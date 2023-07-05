@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Player_Scripts;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -34,6 +35,8 @@ namespace SaveScripts
                 {
                     //GameManager.Instance.SetGameData(saveData);
 
+                    GameManager.Instance.isLoaded = true;
+
                     yield return SceneManager.LoadSceneAsync(saveData.levelName);
                 }
                 else Debug.LogError("Kayıtlı veri bulunamadı!");
@@ -52,6 +55,7 @@ namespace SaveScripts
                 if (saveData != null)
                 {
                     GameManager.Instance.SetGameData(saveData);
+                    GameManager.Instance.isLoaded = true;
 
                     StartCoroutine(LoadGameCoroutine(saveData));
                     loadMenu.SetActive(false);

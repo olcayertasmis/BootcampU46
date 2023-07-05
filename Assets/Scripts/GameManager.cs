@@ -10,6 +10,9 @@ public class GameManager : MonoBehaviour
     private string _levelName;
     private Vector3 _playerPosition;
 
+    [Header("Save Trigger")]
+    public bool isLoaded;
+
     private void Awake()
     {
         if (Instance == null)
