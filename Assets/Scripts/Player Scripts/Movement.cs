@@ -11,7 +11,7 @@ namespace Player_Scripts
         private float _currentAngle;
         private float _currentAngleVelocity;
 
-        [SerializeField] private float speed;
+        public float speed;
 
         [Header("Gravity")]
         [SerializeField] float gravity = 9.8f;
