@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 [CreateAssetMenu(fileName = "Invertory", menuName = "Scriptable/Inventory")]
 public class ScInventory : ScriptableObject
@@ -14,26 +15,52 @@ public class ScInventory : ScriptableObject
     }
     public void DropItem(int index, Vector3 position)
     {
-        for(int i=0; i < inventorySlots[index].itemCount; i++)
+        for (int i = 0; i < inventorySlots[index].itemCount; i++)
         {
             GameObject tempItem = Instantiate(inventorySlots[index].item.itemPrefabs);
-            tempItem.transform.position = position+ new Vector3(i,0,0);
+            tempItem.transform.position = position + new Vector3(i, 0, 0);
         }
-        
+
         DeleteItem(index);
+    }
+
+
+    //OnRight Click SCITEM
+    public SCitem UseItem(int index)
+    {
+        SCitem tempScitem = inventorySlots[index].item;
+        inventorySlots[index].itemCount--;
+        if (inventorySlots[index].itemCount < 0)
+            DeleteItem(index);
+
+        return tempScitem;
+    }
+
+    public int GetItemCount(SCitem item)
+    {
+        int itemCount = 0;
+        foreach (Slot slot in inventorySlots)
+        {
+            if (slot.item.itemName == item.itemName)
+            {
+                itemCount = slot.itemCount;
+            }
+        }
+        Debug.Log("Ýtem Count" + itemCount);
+        return itemCount;
     }
     public bool AddItem(SCitem item)
     {
         foreach (Slot slot in inventorySlots)
         {
-            if(slot.item == item)
+            if (slot.item == item)
             {
                 if (slot.item.canStackable)
                 {
-                    if(slot.itemCount < stackLimit)
+                    if (slot.itemCount < stackLimit)
                     {
                         slot.itemCount++;
-                        if(slot.itemCount >= stackLimit)
+                        if (slot.itemCount >= stackLimit)
                         {
                             slot.isFull = true;
                         }
@@ -41,11 +68,11 @@ public class ScInventory : ScriptableObject
                     }
                 }
             }
-            else if (slot.itemCount==0)
+            else if (slot.itemCount == 0)
             {
                 slot.AddItemToSlot(item);
                 return true;
-            }            
+            }
         }
         return false;
     }

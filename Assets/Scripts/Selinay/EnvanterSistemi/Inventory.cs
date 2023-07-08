@@ -1,7 +1,11 @@
+using System;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class Inventory : MonoBehaviour
 {
+    public event EventHandler OnItemUse;
+
     public ScInventory playerInventory;
     public PlayerActionsItem playerAction;
     InventoryUIController inventoryUI;
@@ -14,6 +18,35 @@ public class Inventory : MonoBehaviour
         inventoryUI = gameObject.GetComponent<InventoryUIController>();
         //inventoryUI.UpdateUI();
     }
+
+    public int GetItemCount(Item item)
+    {
+        return playerInventory.GetItemCount(item.scitem);
+    }
+
+    public void onItemUse(Item item)
+    {
+        //Eðer kullanýlan itemýn SCFood bilgisi geliyorsa baþka bir þey yapmaya gerek yok bu tarafta
+        Debug.Log(item);
+        OnItemUse?.Invoke(this, EventArgs.Empty);
+    }
+    //public void openDoor()
+    //{
+    //    if(GetItemCount(neackle) > 5)
+    //    {
+    //        //open door
+    //    }
+    //}
+
+    //
+    //PLAYER SCRIPTI
+    //void Start(){
+    // inventory.playerInventory.OnItemUse += Player_OnItemUse;
+    //}
+    //private void Player_OnItemUse(object sender, System.EventArgs e)
+    //{
+    //   ÝTEM KULLANILDI BILGISI GELDI
+    //}
     public void CurrentItem(int index)
     {
         if (playerInventory.inventorySlots[index].item)
@@ -60,7 +93,7 @@ public class Inventory : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Item"))
         {
-            if (playerInventory.AddItem(other.gameObject.GetComponent<Item>().item))
+            if (playerInventory.AddItem(other.gameObject.GetComponent<Item>().scitem))
             {
                 Destroy(other.gameObject);
                 inventoryUI.UpdateUI();

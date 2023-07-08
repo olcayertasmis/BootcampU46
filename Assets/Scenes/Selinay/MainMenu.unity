@@ -17329,6 +17329,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 815390569}
     m_Modifications:
+    - target: {fileID: 1560859548, guid: ae79da7ec33e3794ca1c622f8c6ca1b6, type: 3}
+      propertyPath: scitem
+      value: 
+      objectReference: {fileID: 11400000, guid: 0827b3658a732774ebdda9a0ebc55d18, type: 2}
     - target: {fileID: 8563334413852840818, guid: ae79da7ec33e3794ca1c622f8c6ca1b6, type: 3}
       propertyPath: m_Name
       value: Meat (1)
@@ -38928,7 +38932,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 4ac0c565728c3434bbfc262c2f2d2365, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
