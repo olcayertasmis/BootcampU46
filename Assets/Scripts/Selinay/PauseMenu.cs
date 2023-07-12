@@ -41,6 +41,7 @@ public class PauseMenu : MonoBehaviour
         if(panel == "PauseMenuPanel")
         {
             PauseGame();
+            ActionBarPanel.SetActive(false);
         } 
         else if(panel == "ResumeButton")
         {
@@ -49,6 +50,7 @@ public class PauseMenu : MonoBehaviour
         else if(panel == "OptionsButton")
         {
             OptionsMenuPanel.SetActive (true);
+            ActionBarPanel.SetActive (false);
             //MainMenuPanel.SetActive (false);
             //PauseMenuPanel.SetActive (false);
         }
@@ -66,19 +68,11 @@ public class PauseMenu : MonoBehaviour
             InventoryMenuPanel.SetActive(true);
 
         }
-        //else if (panel == "ActionMenuPanel")//Oyun baþladýktan sonra diðer paneller çalýþýrken(Inventory dýþýnda) ActionMenuPanel kapansýn Yoksa hep açýk dursun.(YAZAMADIM)
-        //{
-
-        //    if (MainMenuPanel.activeSelf || PauseMenuPanel.activeSelf || OptionsMenuPanel.activeSelf || MinimapMenuPanel.activeSelf)
-        //    {
-        //        ActionBarPanel.SetActive(false);
-        //    }
-        //    else
-        //    {
-        //        ActionBarPanel.SetActive(true);
-        //    }
-
-        //}
+        else if (panel == "ActionBarPanel")//Oyun baþladýktan sonra diðer paneller çalýþýrken(Inventory dýþýnda) ActionMenuPanel kapansýn Yoksa hep açýk dursun.(YAZAMADIM)
+        {
+            ActionBarPanel.SetActive(true);
+            
+        }
     }
     public void StartGame()
     {

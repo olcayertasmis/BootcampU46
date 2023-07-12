@@ -1,22 +1,27 @@
 using System;
 using UnityEngine;
-using UnityEngine.EventSystems;
 
-public class Inventory : MonoBehaviour
+
+public class Inventory : MonoBehaviour 
 {
     public event EventHandler OnItemUse;
 
     public ScInventory playerInventory;
     public PlayerActionsItem playerAction;
+
     InventoryUIController inventoryUI;
+
+    public OpenDoor opend;
 
     bool isSwapping;
     int tempIndex;
     Slot tempSlot;
     private void Start()
     {
+
         inventoryUI = gameObject.GetComponent<InventoryUIController>();
         //inventoryUI.UpdateUI();
+
     }
 
     public int GetItemCount(Item item)
@@ -29,24 +34,19 @@ public class Inventory : MonoBehaviour
         //Eðer kullanýlan itemýn SCFood bilgisi geliyorsa baþka bir þey yapmaya gerek yok bu tarafta
         Debug.Log(item);
         OnItemUse?.Invoke(this, EventArgs.Empty);
+        Debug.Log(item.scitem.itemName);
     }
-    //public void openDoor()
+
+    //PLAYER SCRIPTI
+    //void Start()
     //{
-    //    if(GetItemCount(neackle) > 5)
-    //    {
-    //        //open door
-    //    }
+    //    inventory.playerInventory.OnItemUse += Player_OnItemUse;
+    //}
+    //private void Player_OnItemUse(object sender, System.EventArgs Meat)
+    //{
+    //    Item kullanýldý bilgisi için gerekli
     //}
 
-    //
-    //PLAYER SCRIPTI
-    //void Start(){
-    // inventory.playerInventory.OnItemUse += Player_OnItemUse;
-    //}
-    //private void Player_OnItemUse(object sender, System.EventArgs e)
-    //{
-    //   ÝTEM KULLANILDI BILGISI GELDI
-    //}
     public void CurrentItem(int index)
     {
         if (playerInventory.inventorySlots[index].item)
@@ -55,6 +55,7 @@ public class Inventory : MonoBehaviour
         }
 
     }
+
     public void DeleteItem()
     {
         if (isSwapping == true)
@@ -64,6 +65,7 @@ public class Inventory : MonoBehaviour
             inventoryUI.UpdateUI();
         }
     }
+
     public void DropItem()
     {
         if (isSwapping == true)
@@ -73,6 +75,13 @@ public class Inventory : MonoBehaviour
             inventoryUI.UpdateUI();
         }
     }
+
+    public void RightClick(int index)
+    {
+            playerInventory.UseItem(index);
+            inventoryUI.UpdateUI();   
+    }
+
     public void SwapItem(int index)
     {
         if (isSwapping == false)
@@ -87,20 +96,41 @@ public class Inventory : MonoBehaviour
             playerInventory.inventorySlots[index] = tempSlot;
             isSwapping = false;
         }
+
         inventoryUI.UpdateUI();
     }
-    private void OnTriggerEnter(Collider other)
+
+    public void OnTriggerEnter(Collider other)
     {
+        Item currentItem = other.gameObject.GetComponent<Item>();
+
         if (other.gameObject.CompareTag("Item"))
         {
-            if (playerInventory.AddItem(other.gameObject.GetComponent<Item>().scitem))
+            if (playerInventory.AddItem(currentItem.scitem))
             {
                 Destroy(other.gameObject);
                 inventoryUI.UpdateUI();
             }
 
         }
+
+        bool taskType = currentItem.scitem.tasktype;
+        if (taskType)
+        {
+            //Door ise yazýlacaklar
+            if (currentItem.scitem.name == "Door")
+            {
+                int count = GetItemCount(currentItem);
+                if (count == 5)
+                {
+                    OpenDoor doorScript = GetComponent<OpenDoor>();
+                    doorScript.MoveRight();
+                    doorScript.MoveLeft();
+                    DeleteItem();
+                }
+
+            }           
+            inventoryUI.UpdateUI();
+        }
     }
-
-
 }

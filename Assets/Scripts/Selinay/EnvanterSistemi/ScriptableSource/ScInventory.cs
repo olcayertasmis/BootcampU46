@@ -1,18 +1,22 @@
+using System;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.UIElements;
 
 [CreateAssetMenu(fileName = "Invertory", menuName = "Scriptable/Inventory")]
+
 public class ScInventory : ScriptableObject
 {
     public List<Slot> inventorySlots = new List<Slot>();
     int stackLimit = 10;
+
     public void DeleteItem(int index)
     {
         inventorySlots[index].isFull = false;
         inventorySlots[index].itemCount = 0;
         inventorySlots[index].item = null;
     }
+
     public void DropItem(int index, Vector3 position)
     {
         for (int i = 0; i < inventorySlots[index].itemCount; i++)
@@ -24,8 +28,18 @@ public class ScInventory : ScriptableObject
         DeleteItem(index);
     }
 
+    public void OnPointerClicks(int index)
+    {
+        for (int i = 0; i < inventorySlots[index].itemCount; i--)
+        {
+            if (inventorySlots[index].item.itemName == "Meat")
+            {
+                UseItem(i);
+            }
+        }
 
-    //OnRight Click SCITEM
+    }
+    
     public SCitem UseItem(int index)
     {
         SCitem tempScitem = inventorySlots[index].item;
@@ -41,7 +55,7 @@ public class ScInventory : ScriptableObject
         int itemCount = 0;
         foreach (Slot slot in inventorySlots)
         {
-            if (slot.item.itemName == item.itemName)
+            if (slot.item != null && slot.item.itemName == item.itemName)
             {
                 itemCount = slot.itemCount;
             }
@@ -49,8 +63,14 @@ public class ScInventory : ScriptableObject
         Debug.Log("Ýtem Count" + itemCount);
         return itemCount;
     }
+
     public bool AddItem(SCitem item)
     {
+        if (item == null)
+        {
+            return false;
+        }
+
         foreach (Slot slot in inventorySlots)
         {
             if (slot.item == item)
@@ -78,7 +98,6 @@ public class ScInventory : ScriptableObject
     }
 }
 
-
 [System.Serializable]
 public class Slot
 {
@@ -94,5 +113,6 @@ public class Slot
         }
         itemCount++;
     }
+    
 }
 
