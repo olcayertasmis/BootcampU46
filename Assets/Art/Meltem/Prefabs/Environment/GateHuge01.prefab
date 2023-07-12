@@ -259,6 +259,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3259704609779525574}
   - component: {fileID: 3259704609796682592}
+  - component: {fileID: 580872730999535214}
   m_Layer: 0
   m_Name: GateHuge01
   m_TagString: Untagged
@@ -311,3 +312,17 @@ LODGroup:
     renderers:
     - renderer: {fileID: 3259704609781425444}
   m_Enabled: 1
+--- !u!64 &580872730999535214
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3259704609779432422}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300004, guid: d6bae189a0fe4b948ab13c0103d593c0, type: 3}

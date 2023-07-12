@@ -176,6 +176,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1589774733098802509}
   - component: {fileID: 1589774733077907949}
+  - component: {fileID: 1098894291110811848}
   m_Layer: 0
   m_Name: RockFloating02
   m_TagString: Untagged
@@ -228,6 +229,20 @@ LODGroup:
     renderers:
     - renderer: {fileID: 1589774733096509353}
   m_Enabled: 1
+--- !u!64 &1098894291110811848
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1589774733098434925}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300004, guid: 28deb9f2de69da84a8b4690810e91ebb, type: 3}
 --- !u!1 &1589774733098434927
 GameObject:
   m_ObjectHideFlags: 0

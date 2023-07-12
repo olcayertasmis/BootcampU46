@@ -191,14 +191,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2909613497783580308}
-  m_LocalRotation: {x: -0, y: 0.65735, z: -0, w: 0.75358546}
-  m_LocalPosition: {x: 4.4, y: -5.7, z: -31.2}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2909613497783806646}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 82.196, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &2909613497784576660
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -259,6 +259,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2909613497783806646}
   - component: {fileID: 2909613497768427030}
+  - component: {fileID: 5298126877443998352}
   m_Layer: 0
   m_Name: Monument01
   m_TagString: Untagged
@@ -311,3 +312,17 @@ LODGroup:
     renderers:
     - renderer: {fileID: 2909613497785575504}
   m_Enabled: 1
+--- !u!64 &5298126877443998352
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2909613497783580310}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300006, guid: de38d6898d9e57a42a9f95a6c0d3548a, type: 3}
