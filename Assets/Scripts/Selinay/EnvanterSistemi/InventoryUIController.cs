@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class InventoryUIController : MonoBehaviour
 {
-    public List<SlotUI> uiList = new List<SlotUI>();
+    public List<SlotUI> uiList = new  List<SlotUI>();
     Inventory _userInventory;
 
     private void Start()
@@ -11,7 +11,7 @@ public class InventoryUIController : MonoBehaviour
         _userInventory = gameObject.GetComponent<Inventory>();
         //UpdateUI();
     }
-
+    
     public void UpdateUI() //arayüz güncellemesi için 
     {
         for (int i = 0; i < uiList.Count; i++)
@@ -38,5 +38,6 @@ public class InventoryUIController : MonoBehaviour
                 }
             }
         }
+        
     }
 }

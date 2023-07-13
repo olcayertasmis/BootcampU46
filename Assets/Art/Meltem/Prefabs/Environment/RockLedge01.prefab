@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7272719172127068225}
   - component: {fileID: 7272719172112499937}
+  - component: {fileID: 2113155535242447040}
   m_Layer: 0
   m_Name: RockLedge01
   m_TagString: Untagged
@@ -62,6 +63,20 @@ LODGroup:
     renderers:
     - renderer: {fileID: 7272719172128969381}
   m_Enabled: 1
+--- !u!64 &2113155535242447040
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7272719172126706785}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300002, guid: 21880eb3f26ed7f4ea0648ac43fd486a, type: 3}
 --- !u!1 &7272719172126706787
 GameObject:
   m_ObjectHideFlags: 0
