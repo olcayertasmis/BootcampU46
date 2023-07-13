@@ -15,7 +15,7 @@ namespace Player_Scripts
         {
             foreach (Canvas canvas in GetComponentsInChildren<Canvas>())
             {
-                if (canvas.CompareTag("HealthBarCanvas")) _healthBar = canvas.GetComponentInChildren<HealthBar>();
+                //if (canvas.CompareTag("HealthBarCanvas")) _healthBar = canvas.GetComponentInChildren<HealthBar>();
             }
         }
 
