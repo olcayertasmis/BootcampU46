@@ -105,23 +105,25 @@ public class Inventory : MonoBehaviour
 
         }
 
-        bool taskType = currentItem.scitem.tasktype;
-        if (taskType)
-        {
-            //Door ise yazýlacaklar
-            if (currentItem.scitem.name == "Door")
-            {
-                int count = GetItemCount(currentItem);
-                if (count == 5)
-                {
-                    OpenDoor doorScript = GetComponent<OpenDoor>();
-                    doorScript.MoveRight();
-                    doorScript.MoveLeft();
+        //bool taskType = currentItem.scitem.tasktype;
+        //if (taskType)
+        //{
+        //    //Door ise yazýlacaklar
+        //    if (currentItem.scitem.name == "Door")
+        //    {
+        //        int count = GetItemCount(currentItem);
+        //        if (count == 5)
+        //        {
+        //            OpenDoor doorScript = GetComponent<OpenDoor>();
+        //            doorScript.MoveRight();
+        //            doorScript.MoveLeft();
 
-                }
-                DeleteItem();
-            }
-            inventoryUI.UpdateUI();
-        }
+        //        }
+
+        //    }
+        //    DeleteItem();
+        //    inventoryUI.UpdateUI();
+        //}
+
     }
 }

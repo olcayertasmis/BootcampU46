@@ -14,7 +14,7 @@ public class PauseMenu : MonoBehaviour
     public GameObject ActionBarPanel;
     private bool isPaused = false;
     private bool isGameStarted = false;
-    //private bool isMinimapOpen = false;
+    
 
     private void Start()
     {
@@ -35,6 +35,7 @@ public class PauseMenu : MonoBehaviour
                 PauseGame();
             }
         }
+        
     }
     public void OpenButton(string panel)
     {
@@ -80,26 +81,39 @@ public class PauseMenu : MonoBehaviour
         if (!isGameStarted)
         {
             isGameStarted = true;
-            MainMenuPanel.SetActive(false);                       
-        }
-        else if (!isGameStarted)
-        {
-            isGameStarted = true;
+            MainMenuPanel.SetActive(false);
             ActionBarPanel.SetActive(true);
         }
+        //else if (!isGameStarted)
+        //{
+        //    isGameStarted = true;
+            
+        //}
     }
+    
     public void PauseGame()
     {
         isPaused = true;
         Time.timeScale = 0f; // Oyun zamanýný durdur
-        PauseMenuPanel.SetActive(true);       
+        PauseMenuPanel.SetActive(true);
+        ActionBarPanel.SetActive(false);
+    }
+    public void OptionsGame()
+    {
+        isPaused = true;
+        Time.timeScale = 0f;
+        OptionsMenuPanel.SetActive(true);
+        ActionBarPanel.SetActive(false);
     }
 
     public void ResumeGame()
     {
         isPaused = false;
         Time.timeScale = 1f; // Oyun zamanýný tekrar baþlat
-        PauseMenuPanel.SetActive(false);        
+        PauseMenuPanel.SetActive(false); 
+        OptionsMenuPanel.SetActive(false );
+        InventoryMenuPanel.SetActive(false);
+        ActionBarPanel.SetActive(true);
     }
     public void QuitGame()
     {

@@ -12,8 +12,8 @@ public class PlayerActionsItem : MonoBehaviour
         currentItem = item; //itemin saldýrý için mi baþka bir görev için mi alýndýðýný anlayýp kodlamak için gerekli
         if (temp)
         {
-            
+
         }
-              
+
     }
 }
