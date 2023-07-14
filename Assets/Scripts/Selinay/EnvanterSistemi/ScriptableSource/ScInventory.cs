@@ -28,18 +28,6 @@ public class ScInventory : ScriptableObject
         DeleteItem(index);
     }
 
-    public void OnPointerClicks(int index)
-    {
-        for (int i = 0; i < inventorySlots[index].itemCount; i--)
-        {
-            if (inventorySlots[index].item.itemName == "Meat")
-            {
-                UseItem(i);
-            }
-        }
-
-    }
-    
     public SCitem UseItem(int index)
     {
         SCitem tempScitem = inventorySlots[index].item;

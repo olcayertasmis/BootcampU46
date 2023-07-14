@@ -20,9 +20,7 @@ public class ButtonRightClickListener : MonoBehaviour, IPointerClickHandler
     public void OnPointerClick(PointerEventData eventData)
     {
         if (eventData.button == PointerEventData.InputButton.Right)
-        {
-            //GameObject clickedGameObject = eventData.pointerClick;
-            //Slot currentSlot =  clickedGameObject.GetComponent<Slot>();
+        {           
 
             Debug.Log("RightClick");
             onRightClick?.Invoke();

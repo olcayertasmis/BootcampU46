@@ -10,11 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5086ed3a3963ab64ab8016e84c52512a, type: 3}
-  m_Name: Axe
+  m_Name: Speed
   m_EditorClassIdentifier: 
-  itemName: Stone Axe
+  itemName: Speed
   itemDescription: you can chop trees
-  canStackable: 0
-  itemIcon: {fileID: 21300064, guid: 34ecf51bcd3f4424eafda7dafd885bd0, type: 3}
-  itemPrefabs: {fileID: 784296219648723589, guid: ea6156cf6d18dde42865689f547254f0, type: 3}
+  canStackable: 1
+  foodtype: 0
+  tooltype: 0
+  tasktype: 0
+  itemIcon: {fileID: 21300000, guid: 6960c6bd5088317429f7e0e033bee813, type: 3}
+  itemPrefabs: {fileID: 1605976140905340654, guid: 393f18547a5d6864dbaced8b7f817dd4, type: 3}
   damage: 15

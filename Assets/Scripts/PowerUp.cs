@@ -19,7 +19,7 @@ public class PowerUp : MonoBehaviour
 
     private IEnumerator PickUp(Collider player)
     {
-        Instantiate(pickUpEffect, transform.position, transform.rotation);
+       // Instantiate(pickUpEffect, transform.position, transform.rotation);
 
         Movement movement = player.GetComponent<Movement>();
         movement.speed *= multiplier;

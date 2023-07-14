@@ -1,9 +1,15 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 namespace Player_Scripts
 {
     public class Movement : MonoBehaviour
     {
+        public ScInventory playerInventory;
+        public Inventory inventory;
+        public Item item;
+
+
         private CharacterController _controller;
         private Camera _cam;
 
@@ -20,6 +26,19 @@ namespace Player_Scripts
         [SerializeField] float jumpHeight = 3f;
 
         private float velocityY;
+
+        public void Start()
+        {
+            inventory.OnItemUse += Inventory_OnItemUse;
+        }
+
+        private void Inventory_OnItemUse(object sender, Inventory.OnUseItemEventArgs e)
+        {
+            if (e.sCitem.itemName == "Jump")
+            {
+                jumpHeight++;
+            }
+        }
 
         private void Awake()
         {
@@ -47,7 +66,7 @@ namespace Player_Scripts
             }
         }
 
-        private void HandleGravityAndJump()
+        public void HandleGravityAndJump()
         {
             if (_controller.isGrounded && velocityY < 0f)
                 velocityY = groundedGravity;
