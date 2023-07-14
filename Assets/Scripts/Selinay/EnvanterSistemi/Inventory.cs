@@ -2,9 +2,14 @@ using System;
 using UnityEngine;
 
 
-public class Inventory : MonoBehaviour 
+public class Inventory : MonoBehaviour
 {
-    public event EventHandler OnItemUse;
+    public event EventHandler<OnUseItemEventArgs> OnItemUse;
+    //Event'in parametresini tanýmlama
+    public class OnUseItemEventArgs : EventArgs
+    {
+        public SCitem sCitem;
+    }
 
     public ScInventory playerInventory;
     public PlayerActionsItem playerAction;
@@ -18,10 +23,8 @@ public class Inventory : MonoBehaviour
     Slot tempSlot;
     private void Start()
     {
-
         inventoryUI = gameObject.GetComponent<InventoryUIController>();
         //inventoryUI.UpdateUI();
-
     }
 
     public int GetItemCount(Item item)
@@ -29,23 +32,15 @@ public class Inventory : MonoBehaviour
         return playerInventory.GetItemCount(item.scitem);
     }
 
-    public void onItemUse(Item item)
+    public void onItemUse(SCitem sCitem)
     {
-        //Eðer kullanýlan itemýn SCFood bilgisi geliyorsa baþka bir þey yapmaya gerek yok bu tarafta
-        Debug.Log(item);
-        OnItemUse?.Invoke(this, EventArgs.Empty);
-        Debug.Log(item.scitem.itemName);
+        OnItemUse?.Invoke(this, new OnUseItemEventArgs { sCitem = sCitem });
     }
-
-    //PLAYER SCRIPTI
-    //void Start()
-    //{
-    //    inventory.playerInventory.OnItemUse += Player_OnItemUse;
-    //}
-    //private void Player_OnItemUse(object sender, System.EventArgs Meat)
-    //{
-    //    Item kullanýldý bilgisi için gerekli
-    //}
+    public void RightClick(int index)
+    {
+        onItemUse(playerInventory.UseItem(index));
+        inventoryUI.UpdateUI();
+    }
 
     public void CurrentItem(int index)
     {
@@ -76,11 +71,7 @@ public class Inventory : MonoBehaviour
         }
     }
 
-    public void RightClick(int index)
-    {
-            playerInventory.UseItem(index);
-            inventoryUI.UpdateUI();   
-    }
+  
 
     public void SwapItem(int index)
     {
@@ -126,10 +117,10 @@ public class Inventory : MonoBehaviour
                     OpenDoor doorScript = GetComponent<OpenDoor>();
                     doorScript.MoveRight();
                     doorScript.MoveLeft();
-                    DeleteItem();
-                }
 
-            }           
+                }
+                DeleteItem();
+            }
             inventoryUI.UpdateUI();
         }
     }

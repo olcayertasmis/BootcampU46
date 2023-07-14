@@ -10,11 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9f01655d0e1393543b0a1d5cc36089f7, type: 3}
-  m_Name: Meat
+  m_Name: Jump
   m_EditorClassIdentifier: 
-  itemName: Meat
-  itemDescription: yummy food
+  itemName: Jump
+  itemDescription: +Jump
   canStackable: 1
-  itemIcon: {fileID: 21300048, guid: 34ecf51bcd3f4424eafda7dafd885bd0, type: 3}
-  itemPrefabs: {fileID: 8563334413852840818, guid: ae79da7ec33e3794ca1c622f8c6ca1b6, type: 3}
-  energy: 50
+  foodtype: 0
+  tooltype: 0
+  tasktype: 0
+  itemIcon: {fileID: 21300000, guid: c67fbf9375ad5c34399c2849430ca7f7, type: 3}
+  itemPrefabs: {fileID: 1812949934553782888, guid: dd60158d363629f4986b5f1760ef4bf8, type: 3}

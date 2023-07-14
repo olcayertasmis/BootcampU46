@@ -3,15 +3,16 @@ using UnityEngine;
 
 public class InventoryUIController : MonoBehaviour
 {
-    public List<SlotUI> uiList = new  List<SlotUI>();
+    public List<SlotUI> uiList = new List<SlotUI>();
     Inventory _userInventory;
+
 
     private void Start()
     {
         _userInventory = gameObject.GetComponent<Inventory>();
         //UpdateUI();
     }
-    
+
     public void UpdateUI() //arayüz güncellemesi için 
     {
         for (int i = 0; i < uiList.Count; i++)
@@ -36,8 +37,33 @@ public class InventoryUIController : MonoBehaviour
                     uiList[i].itemImage.sprite = null;
                     uiList[i].itemCountText.gameObject.SetActive(false);
                 }
+
             }
         }
-        
+
     }
+
+    public void InventoryItemInfo(int i)
+    {
+
+        if (_userInventory.playerInventory.inventorySlots[i].itemCount > 0)
+        {
+            uiList[i].itemNameText.text = _userInventory.playerInventory.inventorySlots[i].item.itemName;
+            //uiList[i].itemNameText.gameObject.SetActive(false);
+            uiList[i].itemDescriptionText.text = _userInventory.playerInventory.inventorySlots[i].item.itemDescription;
+            //uiList[i].itemDescriptionText.gameObject.SetActive(false);          
+            
+        }
+        else
+        {
+            uiList[i].itemNameText.text = null;
+            uiList[i].itemDescriptionText.text = null;
+            uiList[i].itemNameText.gameObject.SetActive(false);
+            uiList[i].itemDescriptionText.gameObject.SetActive(false);
+
+        }
+
+    }
+
+
 }

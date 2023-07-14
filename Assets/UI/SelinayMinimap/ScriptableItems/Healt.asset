@@ -9,14 +9,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3779bcdcdcba3a34da8e13c1c3237531, type: 3}
-  m_Name: Door
+  m_Script: {fileID: 11500000, guid: 9f01655d0e1393543b0a1d5cc36089f7, type: 3}
+  m_Name: Healt
   m_EditorClassIdentifier: 
-  itemName: Door
-  itemDescription: sagfdsg
+  itemName: Healt
+  itemDescription: afdgfd
   canStackable: 1
   foodtype: 0
   tooltype: 0
-  tasktype: 1
-  itemIcon: {fileID: 21300000, guid: 3a8532877364e594684685490280446d, type: 3}
-  itemPrefabs: {fileID: 8275517266243459895, guid: b3dc59dd3b0925846900b3581f68ad8e, type: 3}
+  tasktype: 0
+  itemIcon: {fileID: 21300000, guid: bb67b03c2969d104caba950c446f8c8d, type: 3}
+  itemPrefabs: {fileID: 0}
