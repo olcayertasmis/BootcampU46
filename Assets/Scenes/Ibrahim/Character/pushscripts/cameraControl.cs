@@ -18,7 +18,7 @@ public class cameraControl : MonoBehaviour
     private void LateUpdate()
     {
         yRot += Input.GetAxis("Mouse X")*Time.deltaTime*mouseSpeed;
-        xRot += Input.GetAxis("Mouse Y")*Time.deltaTime*mouseSpeed;
+        xRot += Input.GetAxis("Mouse Y")*Time.deltaTime*-mouseSpeed;
         xRot = Mathf.Clamp(xRot, minX, maxX);
         transform.GetChild(0).localRotation = Quaternion.Euler(xRot, 0, 0);
         transform.localRotation= Quaternion.Euler(0, yRot,0);
