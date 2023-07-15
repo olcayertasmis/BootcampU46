@@ -37,6 +37,7 @@ namespace SaveScripts
             SaveData data = new SaveData();
             //data.keyCount = PlayerInventory.Instance.GetKeyCount();
             data.levelName = SceneManager.GetActiveScene().name;
+            //data.HealthItem = Inventory
             data.position = FindObjectOfType<Player>().transform.position; // SaveTrigger'ın pozisyonunu alır
 
             string slotName = slotNameInputField.text;

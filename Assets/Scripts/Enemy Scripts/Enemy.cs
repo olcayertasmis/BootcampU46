@@ -11,6 +11,7 @@ namespace Enemy_Scripts
         private CharacterController _enemyController;
         private Transform _target;
         private Rigidbody _rb;
+        private Animator _anim;
 
         [Header("Features")]
         [SerializeField] private float followRange;
@@ -26,7 +27,8 @@ namespace Enemy_Scripts
         private Vector3 _originalPosition;
         private Vector3 _targetMovingAround;
         private Vector3 randomDirection;
-        
+
+        private bool meleeAttack;
         private bool _isFollowing;
         private bool isMovingAround;
 
@@ -40,6 +42,7 @@ namespace Enemy_Scripts
         {
             _target = FindObjectOfType<Player>().transform;
             _originalPosition = transform.position;
+            _anim = GetComponent<Animator>();
         }
 
         private void Update()
@@ -108,7 +111,10 @@ namespace Enemy_Scripts
                 _movementTimer = 0;
             }
         }
-
+        private void Attack()
+        {
+            
+        }
         public void TakeDamage(int damage)
         {
             health -= damage;

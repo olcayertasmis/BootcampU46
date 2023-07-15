@@ -8,5 +8,6 @@ namespace SaveScripts
         public int keyCount;
         public string levelName;
         public Vector3 position;
+        public int healthItem;
     }
 }

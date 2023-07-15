@@ -20,12 +20,29 @@ public class charController : MonoBehaviour
     bool pull = false;
     public float health = 100;
 
-    // Start is called before the first frame update
+    
+    public ScInventory playerInventory;//Selinay
+    public Inventory inventory;//Selinay
+    //public Item item;//Selinay
     void Start()
     {
         animator = GetComponent<Animator>();
         m_AudioSource = GetComponent<AudioSource>();
         
+        inventory.OnItemUse += Inventory_OnItemUse;//Selinay
+
+    }
+    
+    private void Inventory_OnItemUse(object sender, Inventory.OnUseItemEventArgs e)//Selinay
+    {
+        if (e.sCitem.itemName == "Jump")
+        {
+            jumpSpeed++;
+        }
+        if (e.sCitem.itemName == "Speed")
+        {
+            speed++;
+        }
     }
 
     // Update is called once per frame
@@ -149,7 +166,7 @@ public class charController : MonoBehaviour
           animator.SetInteger("anim", 0);
           animator.SetBool("pull", false);
           animator.SetBool("push", false);
-          cek.GetComponent<cube>().mass = 500;
+          //cek.GetComponent<cube>().mass = 500;  hata veriyor akþam bakarýz diye yorum satýrý yaptým
         }
         
 
@@ -215,4 +232,8 @@ public class charController : MonoBehaviour
         }
         
     }
+
+    
+
+  
 }
