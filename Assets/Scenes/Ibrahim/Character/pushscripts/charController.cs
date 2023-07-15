@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class charController : MonoBehaviour
@@ -17,6 +18,7 @@ public class charController : MonoBehaviour
     bool walk=false;
     bool push=false;
     bool pull = false;
+    public float health = 100;
 
     // Start is called before the first frame update
     void Start()
@@ -67,13 +69,39 @@ public class charController : MonoBehaviour
 
         else if (Input.GetKey(KeyCode.A))
         {
-            speed = 2;
-            animator.SetInteger("anim", 2);
+            //speed = 2;
+            //animator.SetInteger("anim", 2);
+
+            if (walk)
+            {
+
+                animator.SetInteger("anim", 8);
+                speed = 9;
+                walk = false;
+            }
+            else
+            {
+                speed = 4;
+                animator.SetInteger("anim", 2);
+            }
         }
 
         else if (Input.GetKey(KeyCode.D))
         {
-            animator.SetInteger("anim", 3);
+            //animator.SetInteger("anim", 3);
+
+            if (walk)
+            {
+
+                animator.SetInteger("anim", 9);
+                speed = 9;
+                walk = false;
+            }
+            else
+            {
+                speed = 4;
+                animator.SetInteger("anim", 3);
+            }
         }
 
         else if (Input.GetKey(KeyCode.S))
@@ -84,7 +112,19 @@ public class charController : MonoBehaviour
             }
             else
             {
-                speed = 4;
+                if (walk)
+                {
+
+                    animator.SetInteger("anim", 10);
+                    speed = 9;
+                    walk = false;
+                }
+                else
+                {
+                    speed = 4;
+                    animator.SetInteger("anim", 4);
+                }
+                
             }
             
             animator.SetInteger("anim", 4);
@@ -131,6 +171,16 @@ public class charController : MonoBehaviour
             animator.SetBool("walkjump", false);
             
         }
+
+        if (other.gameObject.tag == "cube")
+        {
+            health--;
+
+            if(health < 0)
+            {
+                animator.SetBool("dead", true);
+            }
+        }
     }
 
     void walkAudio()
@@ -154,6 +204,8 @@ public class charController : MonoBehaviour
         }
         
     }
+    
+   
     private void OnTriggerExit(Collider other)
     {
         if (other.gameObject.tag == "cube")
