@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -15,7 +16,9 @@ public class PauseMenu : MonoBehaviour
     public GameObject ActionBarPanel;
     private bool isPaused = false;
     private bool isGameStarted = false;
+    public AudioSource theme;
 
+    public Text volumeAmount;
     private void Awake()
     {
         //ActionBarPanel.SetActive(true);
@@ -127,6 +130,23 @@ public class PauseMenu : MonoBehaviour
     public void QuitGame()
     {
         Application.Quit();
+    }
+    public void SetQuality(int qual)
+    {
+        QualitySettings.SetQualityLevel(qual);
+    }
+    public void SetFullscreen(bool isFull)
+    {
+        Screen.fullScreen = isFull;
+    }
+    public void SetMusic (bool isMusic)
+    {
+        theme.mute = !isMusic;
+    }
+    public void SetAudio(float value)
+    {
+        AudioListener.volume = value;
+        volumeAmount.text = ((int)value*100).ToString();
     }
 
 }

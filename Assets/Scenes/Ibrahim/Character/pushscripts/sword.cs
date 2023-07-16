@@ -5,7 +5,7 @@ using UnityEngine;
 public class sword : MonoBehaviour
 {
     public GameObject cube;
-    public int dead = 50;
+    public int dead = 0;
     Animator animator;
     // Start is called before the first frame update
     void Start()
@@ -24,11 +24,11 @@ public class sword : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-       
         if (other.gameObject.tag == "cube")
         {
-            dead--;
-            if (dead <= 0)
+           
+            dead++;
+            if (dead == 50)
             {
                 Destroy(cube);
             }

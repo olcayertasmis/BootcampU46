@@ -4,23 +4,22 @@ using UnityEngine;
 
 public class magicScript : MonoBehaviour
 {
+
     public GameObject trail1,trail2,effect,Cube,Magic,healthB,cubeHealth;
     public GameObject magic1,magic2,magic3,magic4,magic5;
     public Transform magic, hand;
-    float magicIndex;
+    float attackIndex;
     bool magicEquipp = false; //istafe
     bool canMagic = true;
     //public GameObject backWeapon;
     //public GameObject handWeapon;
     Animator animator;
-    public float magicSpeed;
 
     // Start is called before the first frame update
     void Start()
     {
         animator = GetComponent<Animator>();
         closeMagicTrail();
-        stopMagic();
     }
 
     // Update is called once per frame
@@ -48,6 +47,7 @@ public class magicScript : MonoBehaviour
             magic2.SetActive(true);
             Invoke("stopMagic", 4);
             cubeHealth.GetComponent<sword>().dead -= 5;
+
 
         }
         else if(Input.GetKeyUp("3"))
@@ -82,8 +82,13 @@ public class magicScript : MonoBehaviour
         {
             Destroy(Cube);
         }
-    }
 
+            canMagic = !canMagic;
+            //attackIndex = Random.Range(0f, 3f);
+            animator.SetTrigger("magic");
+            animator.SetInteger("anim", 7);
+
+        }
     public void openMagicTrail()
     {
       
