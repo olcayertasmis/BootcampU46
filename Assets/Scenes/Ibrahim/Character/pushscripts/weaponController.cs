@@ -24,7 +24,7 @@ public class weaponController : MonoBehaviour
     void Update()
     {
 
-        if (Input.GetKeyUp("1"))
+        if (Input.GetKeyDown(KeyCode.Q))
         {
             equipp=!equipp;
             animator.SetBool("equip", equipp);

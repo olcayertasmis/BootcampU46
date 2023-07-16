@@ -18,7 +18,7 @@ public class charController : MonoBehaviour
     bool walk=false;
     bool push=false;
     bool pull = false;
-    public float health = 1000;
+    public float health = 100;
 
     
     public ScInventory playerInventory;//Selinay
@@ -48,6 +48,7 @@ public class charController : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+      
         
         rb.angularVelocity=Vector3.zero;
         x = Input.GetAxis("Horizontal");
@@ -145,14 +146,6 @@ public class charController : MonoBehaviour
             }
             
             animator.SetInteger("anim", 4);
-        }
-
-        else if (Input.GetKey(KeyCode.Q) && pull == true)
-        {
-         
-            animator.SetBool("pull", true);
-            speed = 0.1f;
-            cek.GetComponent<cube>().mass = 50;
         }
         else if (Input.GetKey(KeyCode.R) && push == true)
         {

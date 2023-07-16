@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class magicScript : MonoBehaviour
 {
-    public GameObject trail1,trail2,effect,Cube,Magic;
+    public GameObject trail1,trail2,effect,Cube,Magic,healthB,cubeHealth;
     public GameObject magic1,magic2,magic3,magic4,magic5;
     public Transform magic, hand;
     float magicIndex;
@@ -27,59 +27,48 @@ public class magicScript : MonoBehaviour
     void Update()
     {
 
-        if (Input.GetKeyUp("2"))
+        if (Input.GetKeyDown(KeyCode.E))
         {
             animator.SetInteger("anim", 6);
             magicEquipp = !magicEquipp;
+            healthB.GetComponent<charController>().health = 100;
         }
+       
 
-        if (Input.GetMouseButton(0) && canMagic==true && magicEquipp)
+        if (Input.GetKeyUp("1"))
         {
+            //animator.SetTrigger("magic");
+            //animator.SetInteger("anim", 7);
+            magic1.SetActive(true);
+            Invoke("stopMagic", 5);
+            cubeHealth.GetComponent<sword>().dead -= 5;
+        }
+        else if(Input.GetKeyUp("2"))
+        {
+            magic2.SetActive(true);
+            Invoke("stopMagic", 4);
+            cubeHealth.GetComponent<sword>().dead -= 5;
 
-            canMagic = !canMagic;
-            magicIndex = Random.Range(0f, 5f);
-            
-            animator.SetTrigger("magic");
-            animator.SetInteger("anim", 7);
+        }
+        else if(Input.GetKeyUp("3"))
+        {
+            magic3.SetActive(true);
+            Invoke("stopMagic", 5);
+            cubeHealth.GetComponent<sword>().dead -= 5;
+        }
+        else if (Input.GetKeyUp("4"))
+        {
             magic4.SetActive(true);
-            Invoke("stopMagic", 2);
-          
+            Invoke("stopMagic", 5);
+            cubeHealth.GetComponent<sword>().dead -= 5;
         }
-        
-
-        canMagic = !canMagic;
-
-        
-    }
-    void ShootParticles()
-    {
-        switch (magicIndex)
+        else if (Input.GetKeyUp("5"))
         {
-            case 0:
-                magic1.SetActive(true);
-                Invoke("stopMagic", 17);
-                break;
-            case 1:
-                magic2.SetActive(true);
-                Invoke("stopMagic", 17);
-                break;
-            case 2:
-                magic3.SetActive(true);
-                Invoke("stopMagic", 71);
-                break;
-            case 3:
-                magic4.SetActive(true);
-                Invoke("stopMagic", 17);
-                break;
-            case 4:
-                magic5.SetActive(true);
-                Invoke("stopMagic", 4);
-                break;
-            default:
-                break;
-
+            magic5.SetActive(true);
+            Invoke("stopMagic", 5);
+            cubeHealth.GetComponent<sword>().dead -= 5;
         }
-
+       
     }
 
     void stopMagic()
@@ -89,26 +78,10 @@ public class magicScript : MonoBehaviour
         magic3.SetActive(false);
         magic4.SetActive(false);
         magic5.SetActive(false);
-        
-    }
-
-    void magicF()
-    {
-        Instantiate(magic, hand);
-        magic.transform.position = Vector3.MoveTowards(magic.transform.position, Cube.transform.position, magicSpeed);
-
-    }
-
-    void equip()
-    {
-        //backWeapon.SetActive(false);
-        //handWeapon.SetActive(true);
-    }
-
-    void unequip()
-    {
-        //backWeapon.SetActive(true);
-        //handWeapon.SetActive(false);
+        if (cubeHealth.GetComponent<sword>().dead <= 0)
+        {
+            Destroy(Cube);
+        }
     }
 
     public void openMagicTrail()
