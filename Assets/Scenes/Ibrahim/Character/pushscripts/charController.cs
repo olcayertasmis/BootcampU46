@@ -18,7 +18,7 @@ public class charController : MonoBehaviour
     bool walk=false;
     bool push=false;
     bool pull = false;
-    public float health = 100;
+    public float health = 1000;
 
     
     public ScInventory playerInventory;//Selinay
@@ -172,7 +172,7 @@ public class charController : MonoBehaviour
 
     }
 
-    private void OnTriggerStay(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
         if (Input.GetKey(KeyCode.Space))
         {
@@ -198,6 +198,12 @@ public class charController : MonoBehaviour
                 animator.SetBool("dead", true);
             }
         }
+
+        if (other.gameObject.tag == "cube")
+        {
+            push = true;
+            pull = true;
+        }
     }
 
     void walkAudio()
@@ -212,15 +218,11 @@ public class charController : MonoBehaviour
 
 
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.tag == "cube")
-        {
-            push = true;
-            pull = true;
-        }
+    //private void OnTriggerEnter(Collider other)
+    //{
+       
         
-    }
+    //}
     
    
     private void OnTriggerExit(Collider other)

@@ -126,6 +126,9 @@ MonoBehaviour:
   rb: {fileID: 871388667341567545}
   speed: 2
   jumpSpeed: 170
+  health: 100
+  playerInventory: {fileID: 11400000, guid: 8c25f2e88d1ef754387859be69c1e39d, type: 2}
+  inventory: {fileID: 1453615874}
 --- !u!114 &871388667341567550
 MonoBehaviour:
   m_ObjectHideFlags: 0
