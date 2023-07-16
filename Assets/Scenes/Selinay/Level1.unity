@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.3069224, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -408,29 +408,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &428609863 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7017707499688289799, guid: 6e9152d581ae72d4f9fc50463aa6e2ad, type: 3}
-  m_PrefabInstance: {fileID: 1052589732}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &428609873 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7649424881438932157, guid: 6e9152d581ae72d4f9fc50463aa6e2ad, type: 3}
   m_PrefabInstance: {fileID: 1052589732}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &428609874
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 428609863}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5d3c3c6bbce54914fa98a1103049c205, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 0
 --- !u!1001 &1052589732
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -490,7 +472,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5096245845423730154, guid: 6e9152d581ae72d4f9fc50463aa6e2ad, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 6e9152d581ae72d4f9fc50463aa6e2ad, type: 3}
 --- !u!1 &1080992358
 GameObject:
@@ -612,6 +595,23 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4898913677634437389, guid: e83148bb86e955a4e9ab4404477ece31, type: 3}
   m_PrefabInstance: {fileID: 234719596}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2082846013 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8265328222711870248, guid: 6e9152d581ae72d4f9fc50463aa6e2ad, type: 3}
+  m_PrefabInstance: {fileID: 1052589732}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2082846019
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2082846013}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5515f2eeabe9c7d4590bf3d4aa71b99c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3074657718655227008
 GameObject:
   m_ObjectHideFlags: 0
@@ -1331,7 +1331,7 @@ GameObject:
   - component: {fileID: 3074657718662522686}
   m_Layer: 0
   m_Name: Chomper
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4803,7 +4803,7 @@ GameObject:
   - component: {fileID: 3830910433473396388}
   m_Layer: 0
   m_Name: Grenadier
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

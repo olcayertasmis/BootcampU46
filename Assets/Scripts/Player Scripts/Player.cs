@@ -13,20 +13,16 @@ namespace Player_Scripts
 
         private void Awake()
         {
-            foreach (Canvas canvas in GetComponentsInChildren<Canvas>())
-            {
-                if (canvas.CompareTag("HealthBarCanvas")) _healthBar = canvas.GetComponentInChildren<HealthBar>();
-            }
+            //foreach (Canvas canvas in GetComponentsInChildren<Canvas>())
+            //{
+            //    if (canvas.CompareTag("HealthBarCanvas")) _healthBar = canvas.GetComponentInChildren<HealthBar>();
+            //}
         }
 
         private void Start()
         {
             currentHealth = maxHealth;
-            _healthBar.SetMaxHealth(maxHealth);
-        }
-
-        private void Update()
-        {
+            //_healthBar.SetMaxHealth(maxHealth);
         }
 
         public void TakeDamage(int damage)

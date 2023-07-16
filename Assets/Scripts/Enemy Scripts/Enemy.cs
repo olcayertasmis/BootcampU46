@@ -58,7 +58,7 @@ namespace Enemy_Scripts
             if (!_target) return;
 
             float distanceToTarget = Vector3.Distance(transform.position, _target.position);
-            Debug.Log(distanceToTarget);
+            //Debug.Log(distanceToTarget);
 
             if (!isAttacking && distanceToTarget < 2.75f) StartCoroutine(AttackCoroutine());
 

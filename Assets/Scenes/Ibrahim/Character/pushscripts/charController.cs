@@ -29,7 +29,7 @@ public class charController : MonoBehaviour
         animator = GetComponent<Animator>();
         m_AudioSource = GetComponent<AudioSource>();
         
-        inventory.OnItemUse += Inventory_OnItemUse;//Selinay
+        //inventory.OnItemUse += Inventory_OnItemUse;//Selinay
 
     }
     
@@ -159,7 +159,7 @@ public class charController : MonoBehaviour
           animator.SetInteger("anim", 0);
           animator.SetBool("pull", false);
           animator.SetBool("push", false);
-          cek.GetComponent<cube>().mass = 500;  //hata veriyor akþam bakarýz diye yorum satýrý yaptým
+//          cek.GetComponent<cube>().mass = 500;  //hata veriyor akï¿½am bakarï¿½z diye yorum satï¿½rï¿½ yaptï¿½m
         }
         
 
