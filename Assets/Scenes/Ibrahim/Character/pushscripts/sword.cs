@@ -24,7 +24,7 @@ public class sword : MonoBehaviour
        
         if (other.gameObject.tag == "cube")
         {
-            if()
+            //if()
             dead++;
             if (dead == 50)
             {
