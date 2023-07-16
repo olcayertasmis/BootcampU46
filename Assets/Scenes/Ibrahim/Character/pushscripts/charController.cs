@@ -166,7 +166,7 @@ public class charController : MonoBehaviour
           animator.SetInteger("anim", 0);
           animator.SetBool("pull", false);
           animator.SetBool("push", false);
-          //cek.GetComponent<cube>().mass = 500;  hata veriyor akþam bakarýz diye yorum satýrý yaptým
+          cek.GetComponent<cube>().mass = 500;  //hata veriyor akþam bakarýz diye yorum satýrý yaptým
         }
         
 
