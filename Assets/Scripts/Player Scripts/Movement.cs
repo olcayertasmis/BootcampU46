@@ -29,7 +29,7 @@ namespace Player_Scripts
 
         public void Start()
         {
-            inventory.OnItemUse += Inventory_OnItemUse;
+            //inventory.OnItemUse += Inventory_OnItemUse;
         }
 
         private void Inventory_OnItemUse(object sender, Inventory.OnUseItemEventArgs e)
