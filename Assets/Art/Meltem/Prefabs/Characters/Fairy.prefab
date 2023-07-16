@@ -41,6 +41,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5152092523428005154}
   - component: {fileID: 5152092523418200752}
+  - component: {fileID: 6237730911714228760}
   m_Layer: 0
   m_Name: Fairy
   m_TagString: Untagged
@@ -75,7 +76,7 @@ Animator:
   m_GameObject: {fileID: 5152092523427584194}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: fb4ee977e7d532a49ad9b14344240c98, type: 3}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8da0985c1e9f06d43860b93b0a8a2832, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -86,6 +87,22 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!111 &6237730911714228760
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5152092523427584194}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 143b1e1e9382a894e9fb643d4572328b, type: 3}
+  m_Animations:
+  - {fileID: 7400000, guid: 143b1e1e9382a894e9fb643d4572328b, type: 3}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &5152092523427584196
 GameObject:
   m_ObjectHideFlags: 0
@@ -96,6 +113,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5152092523428005156}
   - component: {fileID: 5152092523413918832}
+  - component: {fileID: 3119606379930802424}
   m_Layer: 0
   m_Name: HuaYao_01
   m_TagString: Untagged
@@ -219,6 +237,27 @@ SkinnedMeshRenderer:
     m_Center: {x: 0.12741855, y: -0.06516693, z: 0.0000015497208}
     m_Extent: {x: 1.1244708, y: 0.2736126, z: 0.65227044}
   m_DirtyAABB: 0
+--- !u!95 &3119606379930802424
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5152092523427584196}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8da0985c1e9f06d43860b93b0a8a2832, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &5152092523427584208
 GameObject:
   m_ObjectHideFlags: 0
@@ -1524,8 +1563,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5152092523427584352}
-  m_LocalRotation: {x: -1.11022276e-16, y: 0.0000000074505797, z: 0.000000014901159,
-    w: 1}
+  m_LocalRotation: {x: -1.11022276e-16, y: 0.0000000074505797, z: 0.000000014901159, w: 1}
   m_LocalPosition: {x: -0.034520797, y: 0, z: -0.000000038146972}
   m_LocalScale: {x: 1.0000001, y: 1.0000001, z: 1.0000001}
   m_ConstrainProportionsScale: 0
@@ -1620,8 +1658,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5152092523427584358}
-  m_LocalRotation: {x: -0.0000000018626451, y: 0.0000000074505815, z: 1.387779e-17,
-    w: 1}
+  m_LocalRotation: {x: -0.0000000018626451, y: 0.0000000074505815, z: 1.387779e-17, w: 1}
   m_LocalPosition: {x: -0.03206596, y: -0.000000057220458, z: 0}
   m_LocalScale: {x: 0.99999994, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2004,8 +2041,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5152092523427584382}
-  m_LocalRotation: {x: 0.000000004067647, y: 0.0000000072693314, z: -0.046491005,
-    w: 0.9989187}
+  m_LocalRotation: {x: 0.000000004067647, y: 0.0000000072693314, z: -0.046491005, w: 0.9989187}
   m_LocalPosition: {x: -0.034520566, y: 0, z: 0}
   m_LocalScale: {x: 1.0000001, y: 1.0000001, z: 1}
   m_ConstrainProportionsScale: 0

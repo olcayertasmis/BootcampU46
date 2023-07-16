@@ -337,9 +337,6 @@ AnimatorStateTransition:
   - m_ConditionMode: 6
     m_ConditionEvent: anim
     m_EventTreshold: 7
-  - m_ConditionMode: 2
-    m_ConditionEvent: equip
-    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -257747250915268272}
   m_Solo: 0
@@ -674,9 +671,6 @@ AnimatorStateTransition:
   - m_ConditionMode: 6
     m_ConditionEvent: anim
     m_EventTreshold: 6
-  - m_ConditionMode: 2
-    m_ConditionEvent: equip
-    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -4969474542817942378}
   m_Solo: 0
@@ -737,9 +731,6 @@ AnimatorStateTransition:
     m_EventTreshold: 0
   - m_ConditionMode: 2
     m_ConditionEvent: blocking
-    m_EventTreshold: 0
-  - m_ConditionMode: 2
-    m_ConditionEvent: dead
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 4226419296036505190}
@@ -829,9 +820,6 @@ AnimatorStateTransition:
     m_EventTreshold: 0
   - m_ConditionMode: 2
     m_ConditionEvent: blocking
-    m_EventTreshold: 0
-  - m_ConditionMode: 2
-    m_ConditionEvent: dead
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -6730435307790553656}
@@ -1230,9 +1218,6 @@ AnimatorStateTransition:
   - m_ConditionMode: 1
     m_ConditionEvent: equip
     m_EventTreshold: 0
-  - m_ConditionMode: 2
-    m_ConditionEvent: magicEquip
-    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 2521904059980916867}
   m_Solo: 0
@@ -1255,7 +1240,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: magicHit
-  m_Speed: 2.5
+  m_Speed: 1.5
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: -6070011381379308520}
@@ -1506,9 +1491,6 @@ AnimatorStateTransition:
   - m_ConditionMode: 4
     m_ConditionEvent: attackIndex
     m_EventTreshold: 3
-  - m_ConditionMode: 2
-    m_ConditionEvent: dead
-    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -3914467240613846044}
   m_Solo: 0
@@ -2261,9 +2243,6 @@ AnimatorStateTransition:
   - m_ConditionMode: 2
     m_ConditionEvent: blocking
     m_EventTreshold: 0
-  - m_ConditionMode: 2
-    m_ConditionEvent: dead
-    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -6758844425048872917}
   m_Solo: 0
@@ -2395,9 +2374,6 @@ AnimatorStateTransition:
     m_EventTreshold: 1
   - m_ConditionMode: 2
     m_ConditionEvent: blocking
-    m_EventTreshold: 0
-  - m_ConditionMode: 2
-    m_ConditionEvent: dead
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -5668860402887231264}
@@ -2664,9 +2640,6 @@ AnimatorStateTransition:
     m_EventTreshold: 0
   - m_ConditionMode: 6
     m_ConditionEvent: anim
-    m_EventTreshold: 0
-  - m_ConditionMode: 2
-    m_ConditionEvent: dead
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 5574553695790003720}
