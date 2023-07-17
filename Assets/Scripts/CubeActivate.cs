@@ -37,7 +37,7 @@ public class CubeActivate : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "cube")
+        if (other.gameObject.tag == "cube1")
         {
             //Debug.Log("kup girdi");
             cubeCount++;
@@ -46,7 +46,7 @@ public class CubeActivate : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.tag == "cube")
+        if (other.gameObject.tag == "cube1")
         {
             //Debug.Log("kup cikti");
             cubeCount--;

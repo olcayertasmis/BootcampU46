@@ -207,7 +207,7 @@ public class charController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "cube")
+        if (other.gameObject.tag == "cube1")
         {
             push = true;
             pull = true;
@@ -218,7 +218,7 @@ public class charController : MonoBehaviour
    
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.tag == "cube")
+        if (other.gameObject.tag == "cube1")
         {
             push = false;
             pull = false;

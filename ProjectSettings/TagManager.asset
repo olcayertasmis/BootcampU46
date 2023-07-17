@@ -8,6 +8,7 @@ TagManager:
   - cube
   - HealthBarCanvas
   - Enemy
+  - cube1
   layers:
   - Default
   - TransparentFX

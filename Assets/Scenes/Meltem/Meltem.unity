@@ -987,7 +987,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8695532114845415229, guid: 6485e81031c146848942b13fe95ce27d, type: 3}
       propertyPath: m_TagString
-      value: cube
+      value: cube1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6485e81031c146848942b13fe95ce27d, type: 3}
@@ -8400,7 +8400,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 647947359}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 200
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
@@ -9896,7 +9896,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8695532114845415229, guid: 6485e81031c146848942b13fe95ce27d, type: 3}
       propertyPath: m_TagString
-      value: cube
+      value: cube1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6485e81031c146848942b13fe95ce27d, type: 3}
@@ -24561,7 +24561,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2048287140}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 200
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
