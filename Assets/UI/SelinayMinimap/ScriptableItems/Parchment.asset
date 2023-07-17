@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Parchment
   m_EditorClassIdentifier: 
   itemName: Parchment
-  itemDescription: adsfsdfgd
+  itemDescription: Knowledge is always sacred.
   canStackable: 1
   foodtype: 0
   tooltype: 0

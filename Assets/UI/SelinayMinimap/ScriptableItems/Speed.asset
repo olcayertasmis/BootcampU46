@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5086ed3a3963ab64ab8016e84c52512a, type: 3}
   m_Name: Speed
   m_EditorClassIdentifier: 
-  itemName: Speed
-  itemDescription: you can chop trees
+  itemName: +Speed
+  itemDescription: How about keeping up with the times?
   canStackable: 1
   foodtype: 0
   tooltype: 0

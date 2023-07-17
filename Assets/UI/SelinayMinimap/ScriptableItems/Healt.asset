@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f01655d0e1393543b0a1d5cc36089f7, type: 3}
   m_Name: Healt
   m_EditorClassIdentifier: 
-  itemName: Healt
-  itemDescription: afdgfd
+  itemName: +Healt
+  itemDescription: It's too early to give up.
   canStackable: 1
   foodtype: 0
   tooltype: 0

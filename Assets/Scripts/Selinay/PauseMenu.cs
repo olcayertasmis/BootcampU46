@@ -73,7 +73,7 @@ public class PauseMenu : MonoBehaviour
         {
             if (!isPaused)
             {
-                PauseGame();
+                Time.timeScale = 0f;
                 ActionBarPanel.SetActive(true);
             }
             InventoryMenuPanel.SetActive(true);
