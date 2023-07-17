@@ -10,7 +10,7 @@ public class OpenDoor : MonoBehaviour
     private Vector3 initialRightDoorPosition;
     private Vector3 initialLeftDoorPosition;
 
-    private float moveAmount = 1.0f; // Kapýlarýn kaç birim kaydýrýlacaðý
+    private float moveAmount = 6.0f; // Kapýlarýn kaç birim kaydýrýlacaðý
 
     private void Start()
     {

@@ -2787,7 +2787,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerInventory: {fileID: 11400000, guid: 8c25f2e88d1ef754387859be69c1e39d, type: 2}
   playerAction: {fileID: 0}
-  opend: {fileID: 0}
+  opend: {fileID: 853867969}
 --- !u!114 &853867968
 MonoBehaviour:
   m_ObjectHideFlags: 0

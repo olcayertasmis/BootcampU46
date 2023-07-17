@@ -71,7 +71,7 @@ public class Inventory : MonoBehaviour
         }
     }
 
-  
+
 
     public void SwapItem(int index)
     {
@@ -93,37 +93,42 @@ public class Inventory : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
-        Item currentItem = other.gameObject.GetComponent<Item>();
+
 
         if (other.gameObject.CompareTag("Item"))
         {
+            Item currentItem = other.gameObject.GetComponent<Item>();
             if (playerInventory.AddItem(currentItem.scitem))
             {
                 Destroy(other.gameObject);
                 inventoryUI.UpdateUI();
             }
 
-        }
+            bool taskType = currentItem.scitem.tasktype;
 
-        bool taskType = currentItem.scitem.tasktype;
-        if (taskType)
-        {
-            //Door ise yazýlacaklar
-            if (currentItem.scitem.name == "Door")
+            if (taskType)
             {
-                int count = GetItemCount(currentItem);
-                if (count == 5)
+                //Door ise yazýlacaklar
+                if (currentItem.scitem.itemName == "PartitionKey")
                 {
-                    OpenDoor doorScript = GetComponent<OpenDoor>();
-                    doorScript.MoveRight();
-                    doorScript.MoveLeft();
+                    int count = GetItemCount(currentItem);
+                    if (count == 5)
+                    {
+                        OpenDoor doorScript = GetComponent<OpenDoor>();
+                        doorScript.MoveRight();
+                        doorScript.MoveLeft();
+
+                    }
 
                 }
-
+                DeleteItem();
+                inventoryUI.UpdateUI();
             }
-            DeleteItem();
-            inventoryUI.UpdateUI();
+
         }
 
+
+
     }
+
 }

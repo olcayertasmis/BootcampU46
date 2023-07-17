@@ -35,11 +35,11 @@ public class charController : MonoBehaviour
     
     private void Inventory_OnItemUse(object sender, Inventory.OnUseItemEventArgs e)//Selinay
     {
-        if (e.sCitem.itemName == "Jump")
+        if (e.sCitem.itemName == "+Jump")
         {
             jumpSpeed++;
         }
-        if (e.sCitem.itemName == "Speed")
+        if (e.sCitem.itemName == "+Speed")
         {
             speed++;
         }
@@ -173,7 +173,7 @@ public class charController : MonoBehaviour
             rb.velocity=Vector3.up*Time.deltaTime*jumpSpeed;
             animator.SetBool("jump", true);
             animator.SetBool("walkjump", true);
-            jumpaudio.Play();
+            jumpaudio.Play(); //Hiç yaratılmadan çalıştırılmaya çalışı
         }
         else
         {
