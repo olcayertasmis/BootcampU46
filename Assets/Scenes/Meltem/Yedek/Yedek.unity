@@ -7257,7 +7257,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8181272556627950632, guid: e1c874bce30a3cf47973d9e182d3efc9, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8181272556627950632, guid: e1c874bce30a3cf47973d9e182d3efc9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9226,7 +9226,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1583983659977805739, guid: 2f58c6777ee18624b806220f345f125b, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1583983659977805739, guid: 2f58c6777ee18624b806220f345f125b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -14417,7 +14417,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7852573826499784088, guid: 4fad524567df67e49bb8ab8169f8de77, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7852573826499784088, guid: 4fad524567df67e49bb8ab8169f8de77, type: 3}
       propertyPath: m_LocalScale.x
@@ -16037,7 +16037,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5231896374914830308, guid: 555cc735a2c58c648b0156905c0b79a8, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5231896374914830308, guid: 555cc735a2c58c648b0156905c0b79a8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -19643,7 +19643,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 836950575176097178, guid: 7b1005768d4736e428f570f2533f476d, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 155
       objectReference: {fileID: 0}
     - target: {fileID: 836950575176097178, guid: 7b1005768d4736e428f570f2533f476d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -19916,6 +19916,152 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7101816635997158600, guid: d2afb89f6cdeb5d49a68072c12ad9c00, type: 3}
   m_PrefabInstance: {fileID: 1984398299}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1992819347
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6753622334206270593, guid: d1fcc3037c866db48ad07213afbc0dc2, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6753622334206270593, guid: d1fcc3037c866db48ad07213afbc0dc2, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6753622334206270593, guid: d1fcc3037c866db48ad07213afbc0dc2, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6753622334206270593, guid: d1fcc3037c866db48ad07213afbc0dc2, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6753622334206270593, guid: d1fcc3037c866db48ad07213afbc0dc2, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6753622334206270593, guid: d1fcc3037c866db48ad07213afbc0dc2, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6753622334206270593, guid: d1fcc3037c866db48ad07213afbc0dc2, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6753622334206270593, guid: d1fcc3037c866db48ad07213afbc0dc2, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6753622334206270593, guid: d1fcc3037c866db48ad07213afbc0dc2, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6753622334206270593, guid: d1fcc3037c866db48ad07213afbc0dc2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6753622334206270593, guid: d1fcc3037c866db48ad07213afbc0dc2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6753622334206270593, guid: d1fcc3037c866db48ad07213afbc0dc2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6753622334206270593, guid: d1fcc3037c866db48ad07213afbc0dc2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6753622334206270593, guid: d1fcc3037c866db48ad07213afbc0dc2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6753622334206270593, guid: d1fcc3037c866db48ad07213afbc0dc2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6753622334206270593, guid: d1fcc3037c866db48ad07213afbc0dc2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6753622334206270593, guid: d1fcc3037c866db48ad07213afbc0dc2, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6753622334206270593, guid: d1fcc3037c866db48ad07213afbc0dc2, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6753622334206270593, guid: d1fcc3037c866db48ad07213afbc0dc2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6753622334206270593, guid: d1fcc3037c866db48ad07213afbc0dc2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6753622334206270593, guid: d1fcc3037c866db48ad07213afbc0dc2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6753622334206270597, guid: d1fcc3037c866db48ad07213afbc0dc2, type: 3}
+      propertyPath: m_Name
+      value: DialogueCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 6753622335423454507, guid: d1fcc3037c866db48ad07213afbc0dc2, type: 3}
+      propertyPath: lines.Array.size
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6753622335423454507, guid: d1fcc3037c866db48ad07213afbc0dc2, type: 3}
+      propertyPath: lines.Array.data[0]
+      value: "Merhaba, ho\u015Fgeldin! Sana yeteneklerini \xF6\u011Freteyim."
+      objectReference: {fileID: 0}
+    - target: {fileID: 6753622335423454507, guid: d1fcc3037c866db48ad07213afbc0dc2, type: 3}
+      propertyPath: lines.Array.data[1]
+      value: "W A S D ile hareket edebilir, SPACE ile z\u0131playabilirsin."
+      objectReference: {fileID: 0}
+    - target: {fileID: 6753622335423454507, guid: d1fcc3037c866db48ad07213afbc0dc2, type: 3}
+      propertyPath: lines.Array.data[2]
+      value: "SHIFT tu\u015Fu ko\u015Fman\u0131 sa\u011Flar."
+      objectReference: {fileID: 0}
+    - target: {fileID: 6753622335423454507, guid: d1fcc3037c866db48ad07213afbc0dc2, type: 3}
+      propertyPath: lines.Array.data[3]
+      value: "Hayatta kalabilmek i\xE7in sald\u0131r\u0131y\u0131 da \xF6\u011Frenmek
+        zorundas\u0131n."
+      objectReference: {fileID: 0}
+    - target: {fileID: 6753622335423454507, guid: d1fcc3037c866db48ad07213afbc0dc2, type: 3}
+      propertyPath: lines.Array.data[4]
+      value: "1 tu\u015Fu ile k\u0131l\u0131c\u0131n\u0131 \xE7ekip Mouse Sol T\u0131k
+        ile sald\u0131rabilirsin."
+      objectReference: {fileID: 0}
+    - target: {fileID: 6753622335423454507, guid: d1fcc3037c866db48ad07213afbc0dc2, type: 3}
+      propertyPath: lines.Array.data[5]
+      value: "Mouse Sa\u011F T\u0131k ise savunman\u0131 sa\u011Flayacakt\u0131r."
+      objectReference: {fileID: 0}
+    - target: {fileID: 6753622335423454507, guid: d1fcc3037c866db48ad07213afbc0dc2, type: 3}
+      propertyPath: lines.Array.data[6]
+      value: "2 tu\u015Fu ile sihir g\xFC\xE7lerini aktifle\u015Ftirerek Mouse Sol
+        T\u0131k ile sald\u0131r\u0131 yapabilirsin."
+      objectReference: {fileID: 0}
+    - target: {fileID: 6753622335423454507, guid: d1fcc3037c866db48ad07213afbc0dc2, type: 3}
+      propertyPath: lines.Array.data[7]
+      value: "Q ve E tu\u015Flar\u0131 etraftaki k\xFCpleri ta\u015F\u0131man\u0131
+        sa\u011Flayacak."
+      objectReference: {fileID: 0}
+    - target: {fileID: 6753622335423454507, guid: d1fcc3037c866db48ad07213afbc0dc2, type: 3}
+      propertyPath: lines.Array.data[8]
+      value: "K\xFCp ta\u015F\u0131yarak, parkur tamamlayarak kristalleri toplamal\u0131s\u0131n."
+      objectReference: {fileID: 0}
+    - target: {fileID: 6753622335423454507, guid: d1fcc3037c866db48ad07213afbc0dc2, type: 3}
+      propertyPath: lines.Array.data[9]
+      value: "Bu kristaller portal\u0131 aktifle\u015Ftirecek ve b\xF6ylece ana d\xFC\u015Fman\u0131m\u0131zla
+        sava\u015Fabileceksin."
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d1fcc3037c866db48ad07213afbc0dc2, type: 3}
 --- !u!1001 &2005342578
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21141,6 +21287,8 @@ MonoBehaviour:
   InventoryMenuPanel: {fileID: 8772330609482366439}
   MinimapMenuPanel: {fileID: 8772330609239642973}
   ActionBarPanel: {fileID: 8772330610072005635}
+  theme: {fileID: 0}
+  volumeAmount: {fileID: 0}
 --- !u!1001 &395749702973335193
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -49192,6 +49340,8 @@ MonoBehaviour:
   InventoryMenuPanel: {fileID: 8772330609482366439}
   MinimapMenuPanel: {fileID: 8772330609239642973}
   ActionBarPanel: {fileID: 8772330610072005635}
+  theme: {fileID: 0}
+  volumeAmount: {fileID: 0}
 --- !u!114 &8772330610081197028
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -52752,6 +52902,8 @@ MonoBehaviour:
   InventoryMenuPanel: {fileID: 0}
   MinimapMenuPanel: {fileID: 8772330609239642973}
   ActionBarPanel: {fileID: 8772330610072005635}
+  theme: {fileID: 0}
+  volumeAmount: {fileID: 0}
 --- !u!114 &8772330610488509961
 MonoBehaviour:
   m_ObjectHideFlags: 0
