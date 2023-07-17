@@ -10,7 +10,6 @@ namespace Player_Scripts
         {
             if (other.CompareTag("Enemy"))
             {
-                Debug.Log("test");
                 other.GetComponent<Enemy>().TakeDamage(10);
             }
         }

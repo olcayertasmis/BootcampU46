@@ -14,7 +14,7 @@ namespace Player_Scripts
         private void Start()
         {
             currentHealth = maxHealth;
-            //_healthBar.SetMaxHealth(maxHealth);
+            healthBar.SetMaxHealth(maxHealth);
         }
 
         public void TakeDamage(int damage)
