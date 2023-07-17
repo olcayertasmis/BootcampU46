@@ -20562,10 +20562,6 @@ PrefabInstance:
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 11706143}
-    - target: {fileID: 428609874, guid: 6e9152d581ae72d4f9fc50463aa6e2ad, type: 3}
-      propertyPath: maxHealth
-      value: 100
-      objectReference: {fileID: 0}
     - target: {fileID: 853867966, guid: 6e9152d581ae72d4f9fc50463aa6e2ad, type: 3}
       propertyPath: uiList.Array.data[0]
       value: 
