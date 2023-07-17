@@ -145,8 +145,11 @@ public class PauseMenu : MonoBehaviour
     }
     public void SetAudio(float value)
     {
+
         AudioListener.volume = value;
-        volumeAmount.text = ((int)value*100).ToString();
+        volumeAmount.text = ((int)(value*100)).ToString();
     }
+
+    
 
 }
