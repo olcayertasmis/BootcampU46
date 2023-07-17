@@ -424,6 +424,10 @@ PrefabInstance:
       propertyPath: Cam
       value: 
       objectReference: {fileID: 1469367130}
+    - target: {fileID: 5228776859075338571, guid: 6e9152d581ae72d4f9fc50463aa6e2ad, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7017707499688289799, guid: 6e9152d581ae72d4f9fc50463aa6e2ad, type: 3}
       propertyPath: m_Name
       value: Ella_Ana_Prefab
