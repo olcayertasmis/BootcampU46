@@ -6333,7 +6333,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8772330608843340687}
+      - m_Target: {fileID: 8772330610964571260}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -24345,7 +24345,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!222 &8772330608866236720
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -31632,7 +31632,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!222 &8772330609554588671
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -42996,7 +42996,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 63000/10000 XP
+  m_Text: Healt
 --- !u!224 &8772330610591751725
 RectTransform:
   m_ObjectHideFlags: 0
