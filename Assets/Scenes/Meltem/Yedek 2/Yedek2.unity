@@ -20011,54 +20011,65 @@ PrefabInstance:
       propertyPath: m_Name
       value: DialogueCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 6753622334264057650, guid: d1fcc3037c866db48ad07213afbc0dc2, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 7d2e1d93e07c36649b323d21cc320abf, type: 2}
+    - target: {fileID: 6753622334264057650, guid: d1fcc3037c866db48ad07213afbc0dc2, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 2864194204022228109, guid: 7d2e1d93e07c36649b323d21cc320abf, type: 2}
+    - target: {fileID: 6753622334264057650, guid: d1fcc3037c866db48ad07213afbc0dc2, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6753622335423454507, guid: d1fcc3037c866db48ad07213afbc0dc2, type: 3}
       propertyPath: lines.Array.size
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 6753622335423454507, guid: d1fcc3037c866db48ad07213afbc0dc2, type: 3}
       propertyPath: lines.Array.data[0]
-      value: "Merhaba, ho\u015Fgeldin! Sana yeteneklerini \xF6\u011Freteyim."
+      value: Hi, welcome to our colorful dimension!
       objectReference: {fileID: 0}
     - target: {fileID: 6753622335423454507, guid: d1fcc3037c866db48ad07213afbc0dc2, type: 3}
       propertyPath: lines.Array.data[1]
-      value: "W A S D ile hareket edebilir, SPACE ile z\u0131playabilirsin."
+      value: This dimension used to be in peace. But monsters attacked us.
       objectReference: {fileID: 0}
     - target: {fileID: 6753622335423454507, guid: d1fcc3037c866db48ad07213afbc0dc2, type: 3}
       propertyPath: lines.Array.data[2]
-      value: "SHIFT tu\u015Fu ko\u015Fman\u0131 sa\u011Flar."
+      value: We need someone to help us so let me teach you some skills.
       objectReference: {fileID: 0}
     - target: {fileID: 6753622335423454507, guid: d1fcc3037c866db48ad07213afbc0dc2, type: 3}
       propertyPath: lines.Array.data[3]
-      value: "Hayatta kalabilmek i\xE7in sald\u0131r\u0131y\u0131 da \xF6\u011Frenmek
-        zorundas\u0131n."
+      value: Using W A S D, you can move around. Use SPACE to jump and SHIFT to run.
       objectReference: {fileID: 0}
     - target: {fileID: 6753622335423454507, guid: d1fcc3037c866db48ad07213afbc0dc2, type: 3}
       propertyPath: lines.Array.data[4]
-      value: "1 tu\u015Fu ile k\u0131l\u0131c\u0131n\u0131 \xE7ekip Mouse Sol T\u0131k
-        ile sald\u0131rabilirsin."
+      value: You also need to learn how to attack to survive.
       objectReference: {fileID: 0}
     - target: {fileID: 6753622335423454507, guid: d1fcc3037c866db48ad07213afbc0dc2, type: 3}
       propertyPath: lines.Array.data[5]
-      value: "Mouse Sa\u011F T\u0131k ise savunman\u0131 sa\u011Flayacakt\u0131r."
+      value: 1 draws your sword. 2 activates spell mode.
       objectReference: {fileID: 0}
     - target: {fileID: 6753622335423454507, guid: d1fcc3037c866db48ad07213afbc0dc2, type: 3}
       propertyPath: lines.Array.data[6]
-      value: "2 tu\u015Fu ile sihir g\xFC\xE7lerini aktifle\u015Ftirerek Mouse Sol
-        T\u0131k ile sald\u0131r\u0131 yapabilirsin."
+      value: Attack with Left Mouse Button and block with Right Mouse Button.
       objectReference: {fileID: 0}
     - target: {fileID: 6753622335423454507, guid: d1fcc3037c866db48ad07213afbc0dc2, type: 3}
       propertyPath: lines.Array.data[7]
-      value: "Q ve E tu\u015Flar\u0131 etraftaki k\xFCpleri ta\u015F\u0131man\u0131
-        sa\u011Flayacak."
+      value: Q and E lets you move the cubes around the place.
       objectReference: {fileID: 0}
     - target: {fileID: 6753622335423454507, guid: d1fcc3037c866db48ad07213afbc0dc2, type: 3}
       propertyPath: lines.Array.data[8]
-      value: "K\xFCp ta\u015F\u0131yarak, parkur tamamlayarak kristalleri toplamal\u0131s\u0131n."
+      value: You need to collect crystals by solving puzzles and completing quests.
       objectReference: {fileID: 0}
     - target: {fileID: 6753622335423454507, guid: d1fcc3037c866db48ad07213afbc0dc2, type: 3}
       propertyPath: lines.Array.data[9]
-      value: "Bu kristaller portal\u0131 aktifle\u015Ftirecek ve b\xF6ylece ana d\xFC\u015Fman\u0131m\u0131zla
-        sava\u015Fabileceksin."
+      value: These crystals activate a portal that will lead you to the final boss.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6753622335423454507, guid: d1fcc3037c866db48ad07213afbc0dc2, type: 3}
+      propertyPath: lines.Array.data[10]
+      value: Defeat it to bring peace to this dimension. I trust you.
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1fcc3037c866db48ad07213afbc0dc2, type: 3}
