@@ -605,6 +605,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0aebf9d258d703342bb165a404c8e80a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerInventory: {fileID: 0}
+  inventory: {fileID: 0}
+  item: {fileID: 0}
   rotationSmoothTime: 3
   speed: 5
   gravity: 9.8
@@ -624,6 +627,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
+  healthBar: {fileID: 0}
 --- !u!1 &6885732557059957627
 GameObject:
   m_ObjectHideFlags: 0
@@ -826,6 +830,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6885732556728880625}
     m_Modifications:
+    - target: {fileID: 2082680139994200328, guid: 4b51ab36a42ba9b45ae887ea4ee81f31, type: 3}
+      propertyPath: gradient.ctime1
+      value: 43947
+      objectReference: {fileID: 0}
     - target: {fileID: 2082680141456345544, guid: 4b51ab36a42ba9b45ae887ea4ee81f31, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0

@@ -9,15 +9,7 @@ namespace Player_Scripts
         [SerializeField] private int maxHealth;
         private int currentHealth;
 
-        private HealthBar _healthBar;
-
-        private void Awake()
-        {
-            //foreach (Canvas canvas in GetComponentsInChildren<Canvas>())
-            //{
-            //    if (canvas.CompareTag("HealthBarCanvas")) _healthBar = canvas.GetComponentInChildren<HealthBar>();
-            //}
-        }
+        [SerializeField] private HealthBar healthBar;
 
         private void Start()
         {
@@ -31,7 +23,7 @@ namespace Player_Scripts
 
             currentHealth -= damage;
 
-            _healthBar.SetHealth(currentHealth);
+            healthBar.SetHealth(currentHealth);
         }
     }
 }

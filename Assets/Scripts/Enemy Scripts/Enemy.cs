@@ -15,6 +15,7 @@ namespace Enemy_Scripts
         private Transform _target;
         private Animator _anim;
         private BoxCollider _boxCollider;
+        [SerializeField] private GameObject minimapIcon;
 
         [Header("Features")]
         [SerializeField] private float followRange;
@@ -50,6 +51,7 @@ namespace Enemy_Scripts
         {
             _target = FindObjectOfType<Player>().transform;
             _originalPosition = transform.position;
+            SetEnemyOnMinimap();
         }
 
         private void Update()
@@ -167,6 +169,11 @@ namespace Enemy_Scripts
             _enemyController.enabled = false;
             transform.rotation = Quaternion.Slerp(transform.rotation, new Quaternion(0f, 0f, 90f, 0f), 1f);
             transform.position = new Vector3(transform.position.x, .5f, transform.position.z);
+        }
+
+        private void SetEnemyOnMinimap()
+        {
+            Instantiate(minimapIcon, Vector3.zero, Quaternion.Euler(90, 0, 0), transform);
         }
     }
 }
