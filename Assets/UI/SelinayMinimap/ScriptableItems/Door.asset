@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3779bcdcdcba3a34da8e13c1c3237531, type: 3}
   m_Name: Door
   m_EditorClassIdentifier: 
-  itemName: Door
-  itemDescription: sagfdsg
+  itemName: Partition Key
+  itemDescription: Try to collect enough, who knows what you'll find behind secret
+    doors
   canStackable: 1
   foodtype: 0
   tooltype: 0

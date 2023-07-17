@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f01655d0e1393543b0a1d5cc36089f7, type: 3}
   m_Name: Jump
   m_EditorClassIdentifier: 
-  itemName: Jump
-  itemDescription: +Jump
+  itemName: +Jump
+  itemDescription: If you work hard enough, you can rise as high as necessary. But
+    you have to keep working.
   canStackable: 1
   foodtype: 0
   tooltype: 0
