@@ -12101,6 +12101,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8181272555485885136, guid: e1c874bce30a3cf47973d9e182d3efc9, type: 3}
+      propertyPath: m_CullingMask.m_Bits
+      value: 183
+      objectReference: {fileID: 0}
     - target: {fileID: 8181272556627950632, guid: e1c874bce30a3cf47973d9e182d3efc9, type: 3}
       propertyPath: m_RootOrder
       value: 16
@@ -20824,6 +20828,18 @@ PrefabInstance:
       propertyPath: Cam
       value: 
       objectReference: {fileID: 445185761}
+    - target: {fileID: 1923254282125998295, guid: 6e9152d581ae72d4f9fc50463aa6e2ad, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1923254282125998295, guid: 6e9152d581ae72d4f9fc50463aa6e2ad, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1923254282125998295, guid: 6e9152d581ae72d4f9fc50463aa6e2ad, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7017707499688289799, guid: 6e9152d581ae72d4f9fc50463aa6e2ad, type: 3}
       propertyPath: m_Name
       value: Ella_Ana_Prefab
@@ -20870,6 +20886,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7649424881438932157, guid: 6e9152d581ae72d4f9fc50463aa6e2ad, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8775630243892346769, guid: 6e9152d581ae72d4f9fc50463aa6e2ad, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8775630243892346769, guid: 6e9152d581ae72d4f9fc50463aa6e2ad, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 8775630243892346769, guid: 6e9152d581ae72d4f9fc50463aa6e2ad, type: 3}
+      propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

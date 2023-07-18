@@ -176,9 +176,9 @@ namespace Enemy_Scripts
 
         private void SetEnemyOnMinimap()
         {
-            GameObject icon = Instantiate(minimapIcon);
-            icon.transform.SetParent(transform);
-            icon.transform.position = Vector3.zero;
+            GameObject icon = Instantiate(minimapIcon, Vector3.zero, minimapIcon.transform.rotation, transform);
+            //icon.transform.SetParent(transform);
+            icon.transform.localPosition = Vector3.zero;
         }
     }
 }
