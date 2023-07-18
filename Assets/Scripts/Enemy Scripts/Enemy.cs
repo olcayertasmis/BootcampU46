@@ -1,10 +1,13 @@
 using System;
 using System.Collections;
+using System.Numerics;
 using Player_Scripts;
 using Unity.Mathematics;
 using Unity.VisualScripting;
 using UnityEngine;
+using Quaternion = UnityEngine.Quaternion;
 using Random = UnityEngine.Random;
+using Vector3 = UnityEngine.Vector3;
 
 namespace Enemy_Scripts
 {
@@ -173,7 +176,9 @@ namespace Enemy_Scripts
 
         private void SetEnemyOnMinimap()
         {
-            Instantiate(minimapIcon, Vector3.zero, Quaternion.Euler(90, 0, 0), transform);
+            GameObject icon = Instantiate(minimapIcon);
+            icon.transform.SetParent(transform);
+            icon.transform.position = Vector3.zero;
         }
     }
 }
